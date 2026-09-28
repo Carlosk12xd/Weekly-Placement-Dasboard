@@ -1,0 +1,149 @@
+{
+  "counts": {
+    "xlsx_bundles": 12,
+    "pdf_bundles": 11,
+    "pdf_pages": 50,
+    "email_previews": 25,
+    "human_xlsx_pdf": 11,
+    "human_xlsx_only": 1,
+    "workbook_only_archives": 13
+  },
+  "errors": [],
+  "bundles": [
+    {
+      "audience": "Bob",
+      "pdf_pages": 4,
+      "pdf_bytes": 651350,
+      "render_seconds": 19.81
+    },
+    {
+      "audience": "Erica",
+      "pdf_pages": 0,
+      "pdf_bytes": 0,
+      "render_seconds": 0
+    },
+    {
+      "audience": "Kurt",
+      "pdf_pages": 3,
+      "pdf_bytes": 456732,
+      "render_seconds": 19.32
+    },
+    {
+      "audience": "Mike",
+      "pdf_pages": 3,
+      "pdf_bytes": 457780,
+      "render_seconds": 18.43
+    },
+    {
+      "audience": "Noelani",
+      "pdf_pages": 3,
+      "pdf_bytes": 458960,
+      "render_seconds": 19.15
+    },
+    {
+      "audience": "Perry",
+      "pdf_pages": 3,
+      "pdf_bytes": 459875,
+      "render_seconds": 18.91
+    },
+    {
+      "audience": "Soraya",
+      "pdf_pages": 4,
+      "pdf_bytes": 653790,
+      "render_seconds": 19.39
+    },
+    {
+      "audience": "Staci",
+      "pdf_pages": 3,
+      "pdf_bytes": 458440,
+      "render_seconds": 18.69
+    },
+    {
+      "audience": "Steven",
+      "pdf_pages": 4,
+      "pdf_bytes": 651972,
+      "render_seconds": 20.38
+    },
+    {
+      "audience": "Tanya",
+      "pdf_pages": 3,
+      "pdf_bytes": 458113,
+      "render_seconds": 18.86
+    },
+    {
+      "audience": "Tracie",
+      "pdf_pages": 4,
+      "pdf_bytes": 651267,
+      "render_seconds": 20.43
+    },
+    {
+      "audience": "leadership",
+      "pdf_pages": 16,
+      "pdf_bytes": 2981201,
+      "render_seconds": 29.83
+    }
+  ],
+  "date": "2026-09-23",
+  "fixture_as_of": "2026-08-21",
+  "unit_tests": {
+    "passed": 29,
+    "failed": 0,
+    "date": "2026-09-24"
+  },
+  "live_sql_executed": false,
+  "real_emails_sent": 0,
+  "pi_tested": false,
+  "deployed": false,
+  "visual_review": "All 16 leadership pages inspected; overall, program and monthly charts visible within page bounds.",
+  "runtime": {
+    "python": "3.12.14",
+    "LibreOffice": "26.8.0.0.alpha0",
+    "packages": {
+      "openpyxl": "3.1.5",
+      "lxml": "6.1.1",
+      "Pillow": "12.3.0",
+      "pypdf": "6.10.0",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "original_workbooks_unchanged": true,
+  "stress_test": {
+    "weekly_points": 65,
+    "PDF_pages": 1,
+    "synthetic": true,
+    "visual_review": "Weekly data and labels visible; renderer adjusts date-label spacing and rotation."
+  },
+  "filename_check": {
+    "audience": "Tanya",
+    "filename": "2027-FullTime-BSFin-2026-08-21.pdf",
+    "pages": 3,
+    "status": "preview"
+  },
+  "unit_test_log": "tests/validation-log.txt",
+  "operational_update": {
+    "date": "2026-09-24",
+    "regression_tests_passed": 29,
+    "new_operational_tests": 15,
+    "settings_parser": "mocked dotenv_values; directory selection, process precedence and no environment mutation verified",
+    "live_sql_executed": false,
+    "real_emails_sent": 0,
+    "offline_readiness": "passed for all 12 bundles",
+    "revised_runner": {
+      "report_date": "2026-08-21",
+      "status": "completed",
+      "audiences": [
+        "Tanya",
+        "Erica"
+      ],
+      "xlsx_bundles": 2,
+      "pdf_bundles": 1,
+      "pdf_pages": 3,
+      "email_previews": 4,
+      "artifact_hashes_verified": true
+    },
+    "renderer_changed": false,
+    "full_11_pdf_render_repeated": false,
+    "pi_tested": false,
+    "deployed": false
+  }
+}

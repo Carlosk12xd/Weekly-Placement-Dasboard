@@ -1,0 +1,68 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Steven",
+    "programs": [
+      "BSEnt",
+      "BSBusM"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:55:11.862795+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSEnt-BSBusM.xlsx",
+      "sha256": "1a09b829f10091a25a21bd65697f821305b62e49055be14fb11565d9ab1a48cc"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSEnt-BSBusM-2026-08-21.xlsx",
+      "sha256": "a735347217291661e2a1f57357b977cb662f17e9b32b0083831355e2d6ce95df",
+      "metadata_sha256": "2bf4fff749bfd052b07f78f92e98923eba7d209e29901cf4e70f9414b5ef8cbe"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSEnt-BSBusM-2026-08-21.pdf",
+      "sha256": "fd5649ed5cd5580b0bfdad5d4a264e7e33d81fce4305b659ed26649e56e7f7ca",
+      "pages": 4,
+      "bytes": 651972,
+      "elapsed_seconds": 26.03,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSEnt",
+        "BSBusM"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "0cc189fc1330f2142cc031e885c74e3ec6c28afc50dacb6c6c44800a5e597255",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 39452,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "2f687858446198796e7b734dfabe54ee0e43310f5a3805c9065bf157953ff122",
+      "envelope": [
+        "Steven.Steele@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 933139,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "1a09b829f10091a25a21bd65697f821305b62e49055be14fb11565d9ab1a48cc",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

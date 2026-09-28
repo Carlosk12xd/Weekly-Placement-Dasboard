@@ -1,0 +1,13 @@
+# Full-time dashboard mapping is validated in Visualization/update_dashboard.py.
+enabled: true
+cohorts: ['2027']
+template: Visualization/templates/placement_dashboard_template.xlsx
+cover: true
+dpi: 190
+timeout: 300
+print_area: B1:T39
+max_pdf_bytes: 18000000
+max_message_bytes: 25000000
+historical_reports:
+  '2026': LeadershipReport/Reports/2026_weekly_placement_report.xlsx
+# Healthcare remains XLSX-only. Internship tables remain in the attached report.

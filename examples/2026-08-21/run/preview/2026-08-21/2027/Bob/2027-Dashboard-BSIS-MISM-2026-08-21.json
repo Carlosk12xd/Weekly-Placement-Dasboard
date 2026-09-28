@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "cohort": "2027",
+  "report_date": "2026-08-21",
+  "source_sha256": "d3912ad0ca568475248bfbe96cac29fb9dfe25fd0b40da86e1840b45054df2f3",
+  "template_sha256": "5441e0b2b4511884168cc34ef82ec46bcf66c1cb419ce03c7f60e7b6b940ca1a",
+  "pages": [
+    "MSB Full-Time Dashboard",
+    "BSIS",
+    "MISM"
+  ],
+  "source_warnings": [
+    {
+      "source": "2026_weekly_placement_report.xlsx",
+      "table": "MISM2",
+      "cell": "F388",
+      "header": "10/31/20252",
+      "action": "ignored unrecognized historical date"
+    }
+  ],
+  "monthly": {
+    "MSB Full-Time Dashboard": {
+      "25": {
+        "date": "2026-08-21",
+        "kind": "last_available",
+        "rate": 0.1069
+      }
+    },
+    "BSIS": {
+      "25": {
+        "date": "2026-08-21",
+        "kind": "last_available",
+        "rate": 0.1409
+      }
+    },
+    "MISM": {
+      "25": {
+        "date": "2026-08-21",
+        "kind": "last_available",
+        "rate": 0.0549
+      }
+    }
+  },
+  "historical_note": "Prior-year values are recorded snapshots; June template has incomplete 2026 history.",
+  "historical_sources": {
+    "2026": {
+      "sha256": "39a65c649748f857cc469ba34443c476ba2ed4ae8ba51c7246c136e1ae56a6c6",
+      "monthly": {
+        "MSB Full-Time Dashboard": {
+          "27": {
+            "date": "2025-10-31",
+            "rate": 0.2441,
+            "kind": "month_end"
+          },
+          "28": {
+            "date": "2025-11-28",
+            "rate": 0.2912,
+            "kind": "last_available"
+          },
+          "29": {
+            "date": "2025-12-26",
+            "rate": 0.343,
+            "kind": "last_available"
+          },
+          "30": {
+            "date": "2026-01-31",
+            "rate": 0.4462,
+            "kind": "month_end"
+          },
+          "31": {
+            "date": "2026-02-28",
+            "rate": 0.5058,
+            "kind": "month_end"
+          },
+          "32": {
+            "date": "2026-03-31",
+            "rate": 0.5941,
+            "kind": "month_end"
+          },
+          "33": {
+            "date": "2026-04-30",
+            "rate": 0.7162999999999999,
+            "kind": "month_end"
+          },
+          "34": {
+            "date": "2026-05-31",
+            "rate": 0.7974,
+            "kind": "month_end"
+          },
+          "35": {
+            "date": "2026-06-30",
+            "rate": 0.8704999999999999,
+            "kind": "month_end"
+          },
+          "36": {
+            "date": "2026-07-31",
+            "rate": 0.9411,
+            "kind": "month_end"
+          },
+          "37": {
+            "date": "2026-08-21",
+            "rate": 0.9525,
+            "kind": "last_available"
+          }
+        },
+        "BSIS": {
+          "27": {
+            "date": "2025-10-31",
+            "rate": 0.2264,
+            "kind": "month_end"
+          },
+          "28": {
+            "date": "2025-11-28",
+            "rate": 0.3007,
+            "kind": "last_available"
+          },
+          "29": {
+            "date": "2025-12-26",
+            "rate": 0.338,
+            "kind": "last_available"
+          },
+          "30": {
+            "date": "2026-01-31",
+            "rate": 0.4234000000000001,
+            "kind": "month_end"
+          },
+          "31": {
+            "date": "2026-02-28",
+            "rate": 0.5390999999999999,
+            "kind": "month_end"
+          },
+          "32": {
+            "date": "2026-03-31",
+            "rate": 0.6303,
+            "kind": "month_end"
+          },
+          "33": {
+            "date": "2026-04-30",
+            "rate": 0.6917,
+            "kind": "month_end"
+          },
+          "34": {
+            "date": "2026-05-31",
+            "rate": 0.8073,
+            "kind": "month_end"
+          },
+          "35": {
+            "date": "2026-06-30",
+            "rate": 0.8462000000000001,
+            "kind": "month_end"
+          },
+          "36": {
+            "date": "2026-07-31",
+            "rate": 0.8931999999999999,
+            "kind": "month_end"
+          },
+          "37": {
+            "date": "2026-08-21",
+            "rate": 0.902,
+            "kind": "last_available"
+          }
+        },
+        "MISM": {
+          "27": {
+            "date": "2025-10-31",
+            "rate": 0.14,
+            "kind": "month_end"
+          },
+          "28": {
+            "date": "2025-11-28",
+            "rate": 0.2062,
+            "kind": "last_available"
+          },
+          "29": {
+            "date": "2025-12-26",
+            "rate": 0.2551,
+            "kind": "last_available"
+          },
+          "30": {
+            "date": "2026-01-31",
+            "rate": 0.4078,
+            "kind": "month_end"
+          },
+          "31": {
+            "date": "2026-02-28",
+            "rate": 0.4465999999999999,
+            "kind": "month_end"
+          },
+          "32": {
+            "date": "2026-03-31",
+            "rate": 0.5446,
+            "kind": "month_end"
+          },
+          "33": {
+            "date": "2026-04-30",
+            "rate": 0.6698999999999999,
+            "kind": "month_end"
+          },
+          "34": {
+            "date": "2026-05-31",
+            "rate": 0.7912,
+            "kind": "month_end"
+          },
+          "35": {
+            "date": "2026-06-30",
+            "rate": 0.8151999999999999,
+            "kind": "month_end"
+          },
+          "36": {
+            "date": "2026-07-31",
+            "rate": 0.9101,
+            "kind": "month_end"
+          },
+          "37": {
+            "date": "2026-08-21",
+            "rate": 0.9,
+            "kind": "last_available"
+          }
+        }
+      }
+    }
+  },
+  "weekly_dates": [
+    "2026-06-26",
+    "2026-07-10",
+    "2026-07-17",
+    "2026-07-24",
+    "2026-07-31",
+    "2026-08-07",
+    "2026-08-14",
+    "2026-08-21"
+  ],
+  "dashboard_sha256": "6a43ccd23ae73c6c82f6528e42e0cb0772694ea527fbe22c34a1e834815486ff"
+}

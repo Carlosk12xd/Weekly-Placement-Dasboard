@@ -1,0 +1,68 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Soraya",
+    "programs": [
+      "BSHRM",
+      "BSStrat"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:53:51.496390+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSHRM-BSStrat.xlsx",
+      "sha256": "ae45f34f522c7258b1526453aebe2de7640e0b907ae1970f95589f762f8301cd"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSHRM-BSStrat-2026-08-21.xlsx",
+      "sha256": "3c60c2d18267458797786c16496a000ce24f9816e6ae77d3e3ffc4985495ba10",
+      "metadata_sha256": "09ff653a152a479c1c7f26e34767fe2badcbf16aaf7b9d2b5cc5c2c252f52c88"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSHRM-BSStrat-2026-08-21.pdf",
+      "sha256": "524ae2570df15f3838fa2fb47af5cb8ae7feb4c319f8fa98a7adc52b20b16b89",
+      "pages": 4,
+      "bytes": 653790,
+      "elapsed_seconds": 25.26,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSHRM",
+        "BSStrat"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "4209882379fef6fec61fe5274416ba6ef7c9f65e6cac34aa2d9a9379eec9f5b1",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 39102,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "ab40c0f8ac674e918ced4e00a627d083e405edf5feb9a7c93acaf7233210cda6",
+      "envelope": [
+        "Jonathan.Creer@byu.edu",
+        "Soraya.Cullimore@byu.edu",
+        "quinn_frazier@byu.edu",
+        "bccdata@byu.edu"
+      ],
+      "bytes": 935279,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "ae45f34f522c7258b1526453aebe2de7640e0b907ae1970f95589f762f8301cd",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

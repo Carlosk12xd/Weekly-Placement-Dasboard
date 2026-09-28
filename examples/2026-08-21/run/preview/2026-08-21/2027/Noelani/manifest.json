@@ -1,0 +1,66 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Noelani",
+    "programs": [
+      "BSEDM"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:53:44.355007+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSEDM.xlsx",
+      "sha256": "c3784e259865a7457365867a07dd1d8dcd0aac9049f3067568505701e0c07753"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSEDM-2026-08-21.xlsx",
+      "sha256": "ac999652dd48320414ee0a83c01d04a6774bae50b20a5fd9cc100448debbef80",
+      "metadata_sha256": "3682f245d0b49582a0bba55955aa297efdac719a176b5da4638135c72b9a2eaf"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSEDM-2026-08-21.pdf",
+      "sha256": "84f2962e3b42b6352a508137571ff3ec8cfb02940830b052c1eeea7d3c18fc5e",
+      "pages": 3,
+      "bytes": 458960,
+      "elapsed_seconds": 4.94,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSEDM"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "24c91448627b76e9c6c4c2b2d8edc279471ea9f84237887c286293c7748fa1d9",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 25274,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "e5590238ed3b3a7f00f2f7ccead44195c322829d5c66fe088b3b95c57ad73937",
+      "envelope": [
+        "noelani_wayas@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 654830,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "c3784e259865a7457365867a07dd1d8dcd0aac9049f3067568505701e0c07753",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

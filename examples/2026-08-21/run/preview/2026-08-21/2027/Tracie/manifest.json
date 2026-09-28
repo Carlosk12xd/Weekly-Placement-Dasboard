@@ -1,0 +1,68 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Tracie",
+    "programs": [
+      "BSAcc",
+      "MAcc"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:53:08.622865+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSAcc-MAcc.xlsx",
+      "sha256": "521c500c9688d9592f16abc8018f2c9aa1cf693ed0848b02b97d781d3da252f6"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSAcc-MAcc-2026-08-21.xlsx",
+      "sha256": "85d0cd6416573b67ce9734e8ad991858bd448e3969e5f6f9a265f50a3bb69a2e",
+      "metadata_sha256": "27e1af2b45859f5043eb9152b8212b86674987b4164517d826de40f30ccd28c5"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSAcc-MAcc-2026-08-21.pdf",
+      "sha256": "b9670b5d96f4af261e9e3320c66df948a195e737834c512a9456175e3ea6b1ff",
+      "pages": 4,
+      "bytes": 651267,
+      "elapsed_seconds": 33.54,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSAcc",
+        "MAcc"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "8c0f17e0650437a2a47bd763e3b174e0d9849b74a54f7f646b1cd19ca75e06e5",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 34946,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "df62c2147deef4d8c7b350861cbc07150963455af33b1972b48ad9f78ba4b816",
+      "envelope": [
+        "Tracie.Laham@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 927664,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "521c500c9688d9592f16abc8018f2c9aa1cf693ed0848b02b97d781d3da252f6",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

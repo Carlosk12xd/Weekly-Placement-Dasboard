@@ -1,0 +1,226 @@
+{
+  "executed_on": "2026-09-28",
+  "report_data_as_of": "2026-08-21",
+  "cohort": "2027",
+  "status": "passed",
+  "offline": true,
+  "real_emails_sent": 0,
+  "live_sql_queried": false,
+  "counts": {
+    "report_workbooks": 12,
+    "editable_dashboards": 11,
+    "pdfs": 11,
+    "pdf_pages": 50,
+    "email_previews": 25,
+    "human_pdf_emails": 11,
+    "human_workbook_only_emails": 1,
+    "workbook_archive_emails": 13,
+    "reconciled_current_rates": 39,
+    "reconciled_status_cells": 429
+  },
+  "regression_tests_passed": 29,
+  "bundles": [
+    {
+      "audience": "leadership",
+      "programs": null,
+      "pdf_pages": 16,
+      "attachments": {
+        "box": [
+          "2027_weekly_placement_report.xlsx"
+        ],
+        "zoho": [
+          "2027_weekly_placement_report.xlsx"
+        ],
+        "human": [
+          "2027_weekly_placement_report.xlsx",
+          "2027-FullTime-Leadership-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Tracie",
+      "programs": [
+        "BSAcc",
+        "MAcc"
+      ],
+      "pdf_pages": 4,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSAcc-MAcc.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSAcc-MAcc.xlsx",
+          "2027-FullTime-BSAcc-MAcc-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Noelani",
+      "programs": [
+        "BSEDM"
+      ],
+      "pdf_pages": 3,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSEDM.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSEDM.xlsx",
+          "2027-FullTime-BSEDM-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Soraya",
+      "programs": [
+        "BSHRM",
+        "BSStrat"
+      ],
+      "pdf_pages": 4,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSHRM-BSStrat.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSHRM-BSStrat.xlsx",
+          "2027-FullTime-BSHRM-BSStrat-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Tanya",
+      "programs": [
+        "BSFin"
+      ],
+      "pdf_pages": 3,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSFin.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSFin.xlsx",
+          "2027-FullTime-BSFin-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Kurt",
+      "programs": [
+        "BSGSCM"
+      ],
+      "pdf_pages": 3,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSGSCM.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSGSCM.xlsx",
+          "2027-FullTime-BSGSCM-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Steven",
+      "programs": [
+        "BSEnt",
+        "BSBusM"
+      ],
+      "pdf_pages": 4,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSEnt-BSBusM.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSEnt-BSBusM.xlsx",
+          "2027-FullTime-BSEnt-BSBusM-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Bob",
+      "programs": [
+        "BSIS",
+        "MISM"
+      ],
+      "pdf_pages": 4,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSIS-MISM.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSIS-MISM.xlsx",
+          "2027-FullTime-BSIS-MISM-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Mike",
+      "programs": [
+        "BSMktg"
+      ],
+      "pdf_pages": 3,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-BSMktg.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-BSMktg.xlsx",
+          "2027-FullTime-BSMktg-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Perry",
+      "programs": [
+        "MBA"
+      ],
+      "pdf_pages": 3,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-MBA.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-MBA.xlsx",
+          "2027-FullTime-MBA-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Staci",
+      "programs": [
+        "MPA"
+      ],
+      "pdf_pages": 3,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-MPA.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-MPA.xlsx",
+          "2027-FullTime-MPA-2026-08-21.pdf"
+        ]
+      }
+    },
+    {
+      "audience": "Erica",
+      "programs": [
+        "Healthcare"
+      ],
+      "pdf_pages": 0,
+      "attachments": {
+        "box": [
+          "2027-WeeklyPlacement-Healthcare.xlsx"
+        ],
+        "human": [
+          "2027-WeeklyPlacement-Healthcare.xlsx"
+        ]
+      }
+    }
+  ],
+  "visual_review": "All 16 leadership pages reviewed, with detailed overall, Finance and MISM inspections.",
+  "pi_tested": false,
+  "deployed": false,
+  "example_launcher_checked": true,
+  "original_code_release": "2026-09-24",
+  "original_code_archive_sha256": "fc8c3fce38b0561d56d32e9890b64a3acf36297aca69d0732c64f6e284577c5f"
+}

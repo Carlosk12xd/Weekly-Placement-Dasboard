@@ -1,0 +1,66 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Kurt",
+    "programs": [
+      "BSGSCM"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:54:45.309083+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSGSCM.xlsx",
+      "sha256": "3896315bdc19fddff95375cb9cc3f3442fc5f7f68b50ec3792bdf4a9d4541716"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSGSCM-2026-08-21.xlsx",
+      "sha256": "75d7a1f1ce85d6e86d8f076be2e1ed1c9c96888c0b15833b08b92c605a72ed4c",
+      "metadata_sha256": "0d65769bb59ab9ce93dcc8a0e6170c22452044772ffed4d6da19a7e6edafb1a8"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSGSCM-2026-08-21.pdf",
+      "sha256": "8ca49f5f6979fdf0c3b1aac587fdfc11d0dc6713ce2c0cf25c3cf080f9f1d418",
+      "pages": 3,
+      "bytes": 456732,
+      "elapsed_seconds": 24.32,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSGSCM"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "a20aee351d1a4dff8824a06afb1e5106f311298516ea925f1bf81ed4e4427d25",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 29160,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "9c8ca190a9a2656d29d630e449b0d770ac2f68aa28076772928c1771b845b61e",
+      "envelope": [
+        "Kurt.Francis@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 655665,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "3896315bdc19fddff95375cb9cc3f3442fc5f7f68b50ec3792bdf4a9d4541716",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

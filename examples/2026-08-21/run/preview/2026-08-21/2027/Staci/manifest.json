@@ -1,0 +1,66 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Staci",
+    "programs": [
+      "MPA"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:57:14.038916+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-MPA.xlsx",
+      "sha256": "c74dbd654a5cecd648889525e0819c728999e7f6d0e205fa197325ed4ee274d5"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-MPA-2026-08-21.xlsx",
+      "sha256": "8d7629269ae8d0ab1e4401b2198d68c260b38e7f9f63d5e6b8c85ae3443d430b",
+      "metadata_sha256": "6402e56f5213c007ae27f93b62828d4225996cc461a9c69519eaa100f21ee648"
+    },
+    "pdf": {
+      "file": "2027-FullTime-MPA-2026-08-21.pdf",
+      "sha256": "4277bdb21a80df2991b222acd14ced84e9ff5be887b6a5120fd563c6e75790df",
+      "pages": 3,
+      "bytes": 458440,
+      "elapsed_seconds": 25.49,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "MPA"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "c6df12727dddc842810d1670ec1598da1301b624e87891a6ac052fec59c9983a",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 25246,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "04d8695d03ba0621513102e14037c7db74d71e08c943b9e82aaebd7bd3ffdda3",
+      "envelope": [
+        "staci_carroll@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 654088,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "c74dbd654a5cecd648889525e0819c728999e7f6d0e205fa197325ed4ee274d5",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

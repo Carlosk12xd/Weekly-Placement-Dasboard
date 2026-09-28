@@ -1,0 +1,42 @@
+test_append_rerun_and_closed_month_finalization (test_automation.DashboardTests.test_append_rerun_and_closed_month_finalization) ... ok
+test_chart_style_parts_and_cache_lengths (test_automation.DashboardTests.test_chart_style_parts_and_cache_lengths) ... ok
+test_conflicting_duplicate_and_missing_current_date_fail (test_automation.DashboardTests.test_conflicting_duplicate_and_missing_current_date_fail) ... ok
+test_identical_duplicates_collapsed_and_malformed_header_reported (test_automation.DashboardTests.test_identical_duplicates_collapsed_and_malformed_header_reported) ... ok
+test_june_counts_rates_and_monthly_cells (test_automation.DashboardTests.test_june_counts_rates_and_monthly_cells) ... ok
+test_prior_year_refresh_uses_available_observations_without_lookahead (test_automation.DashboardTests.test_prior_year_refresh_uses_available_observations_without_lookahead) ... ok
+test_rollover_and_monthly_cycle (test_automation.DashboardTests.test_rollover_and_monthly_cycle) ... ok
+test_calendar_and_tracking_boundaries (test_automation.FlowTests.test_calendar_and_tracking_boundaries) ... ok
+test_finance_details_use_both_internship_years (test_automation.FlowTests.test_finance_details_use_both_internship_years) ... ok
+test_healthcare_body_is_not_overwritten (test_automation.FlowTests.test_healthcare_body_is_not_overwritten) ... ok
+test_leadership_builder_explicit_date_path_and_same_day_reuse (test_automation.FlowTests.test_leadership_builder_explicit_date_path_and_same_day_reuse) ... ok
+test_no_send_and_uncertain_smtp_are_journaled (test_automation.FlowTests.test_no_send_and_uncertain_smtp_are_journaled) ... ok
+test_pdf_failure_holds_human_and_retry_keeps_snapshot (test_automation.FlowTests.test_pdf_failure_holds_human_and_retry_keeps_snapshot) ... 2027/Tanya visualization failed: RuntimeError: fixture conversion failure
+ok
+test_program_builder_explicit_date_path_and_same_day_reuse (test_automation.FlowTests.test_program_builder_explicit_date_path_and_same_day_reuse) ... ok
+test_corrupt_bundle_is_preserved_and_next_audience_still_runs (test_operations.OperationsTests.test_corrupt_bundle_is_preserved_and_next_audience_still_runs) ... ok
+test_database_uses_returned_settings_not_shared_environment (test_operations.OperationsTests.test_database_uses_returned_settings_not_shared_environment) ... ok
+test_directory_settings_are_isolated_and_process_values_take_precedence (test_operations.OperationsTests.test_directory_settings_are_isolated_and_process_values_take_precedence) ... ok
+test_early_configuration_failure_replaces_stale_success_summary (test_operations.OperationsTests.test_early_configuration_failure_replaces_stale_success_summary) ... Report invocation failed: ValueError: delivery_enabled must be a YAML boolean, not quoted text
+ok
+test_invalid_envelope_fails_before_smtp (test_operations.OperationsTests.test_invalid_envelope_fails_before_smtp) ... ok
+test_live_converter_failure_sends_only_archive_using_group_settings (test_operations.OperationsTests.test_live_converter_failure_sends_only_archive_using_group_settings) ... 2027/Tanya visualization failed: RuntimeError: missing converter
+ok
+test_lock_contention_records_blocked_attempt_without_overwriting_active_summary (test_operations.OperationsTests.test_lock_contention_records_blocked_attempt_without_overwriting_active_summary) ... Another report run is already active
+ok
+test_missing_converter_holds_pdf_mail_without_blocking_healthcare_or_archive_previews (test_operations.OperationsTests.test_missing_converter_holds_pdf_mail_without_blocking_healthcare_or_archive_previews) ... 2027/Tanya visualization failed: RuntimeError: Missing renderer executables
+ok
+test_missing_workbook_does_not_stop_other_audiences (test_operations.OperationsTests.test_missing_workbook_does_not_stop_other_audiences) ... 2027/Tanya failed: FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp_r__aos1/source/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSFin.xlsx'
+ok
+test_readiness_does_not_display_setting_values (test_operations.OperationsTests.test_readiness_does_not_display_setting_values) ... ok
+test_readiness_is_read_only_and_offline_skips_credentials (test_operations.OperationsTests.test_readiness_is_read_only_and_offline_skips_credentials) ... ok
+test_readiness_reports_missing_renderer_only_for_supported_audiences (test_operations.OperationsTests.test_readiness_reports_missing_renderer_only_for_supported_audiences) ... ok
+test_skipped_day_preserves_last_report_and_interrupt_is_recorded (test_operations.OperationsTests.test_skipped_day_preserves_last_report_and_interrupt_is_recorded) ... ok
+test_status_detects_corrupt_artifacts_and_uncertain_delivery_without_sending (test_operations.OperationsTests.test_status_detects_corrupt_artifacts_and_uncertain_delivery_without_sending) ... ok
+test_unsafe_yaml_types_and_duplicate_cohorts_are_rejected (test_operations.OperationsTests.test_unsafe_yaml_types_and_duplicate_cohorts_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 23.954s
+
+OK
+Starting BSFin...
+Updated: /tmp/tmpf73myonf/2027-WeeklyPlacement-BSFin.xlsx

@@ -1,0 +1,15 @@
+{
+  "exported_on": "2026-09-28",
+  "purpose": "Portable inspection of completed offline example",
+  "adapted_files": [
+    "examples/2026-08-21/run/last-run.json",
+    "examples/2026-08-21/run/last-report-run.json",
+    "examples/2026-08-21/run/invocations/20260928T195224-5e7858d30013.json"
+  ],
+  "adaptation": "Bundle-directory references changed from absolute paths to paths relative to the run folder.",
+  "artifact_bytes_changed": false,
+  "delivery_ledgers_changed": false,
+  "original_execution_record": "execution-record.original.json",
+  "source_paths_in_provenance": "Recorded as executed; some point to the original workspace.",
+  "usage": "Use core.status for inspection. Run a fresh example with run_example.py instead of sending from this exported run."
+}

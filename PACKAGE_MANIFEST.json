@@ -1,0 +1,808 @@
+{
+  "packaged_on": "2026-09-28",
+  "code_release": "2026-09-24",
+  "fixture_as_of": "2026-08-21",
+  "code_release_unchanged": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 237,
+      "sha256": "40fc84c00cb5e6f5b34f187e38b6d0e611d2569c5807721a2a04f92aafc605ec"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5784,
+      "sha256": "c8ec2986ec0f8d5ac1be9b4e0b9915aaddac46be437ba8b0c7a9885ef23f89af"
+    },
+    {
+      "path": "RELEASE_MANIFEST.json",
+      "bytes": 11765,
+      "sha256": "780c8aa834b82866599eb348f23efa8ff8f11a2f2367f822132a26c73bb8f01b"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 1074,
+      "sha256": "ca97329c5f0a6ae5102af2d0c767573511387ee587e00b90a8bd618776e25d5e"
+    },
+    {
+      "path": "examples/2026-08-21/EXPORT_NOTES.json",
+      "bytes": 771,
+      "sha256": "c9c1749c1e31067a9b98760e1a4c7567712de566acc621d51792131f7632bbb8"
+    },
+    {
+      "path": "examples/2026-08-21/RESULTS.json",
+      "bytes": 5022,
+      "sha256": "ac2e4d4b696e2d3a2bfbe0615cffc954244b25320fede1a39bd7d94ad8e4c1ed"
+    },
+    {
+      "path": "examples/2026-08-21/execution-record.original.json",
+      "bytes": 5984,
+      "sha256": "a3d515cf97dab3052bae1f5aed3aecdb412765f9f236f5797848d263103b3181"
+    },
+    {
+      "path": "examples/2026-08-21/regression-tests.log",
+      "bytes": 5152,
+      "sha256": "56820daa6ece393f5473236874e2532b0304c79effb2f9b2df181f1ab76fa4f9"
+    },
+    {
+      "path": "examples/2026-08-21/run/invocations/20260928T195224-5e7858d30013.json",
+      "bytes": 4808,
+      "sha256": "54792b344ba08e5e689fed27cdc464f64f0337963af4b351ea8bad943c395ff5"
+    },
+    {
+      "path": "examples/2026-08-21/run/last-report-run.json",
+      "bytes": 4808,
+      "sha256": "54792b344ba08e5e689fed27cdc464f64f0337963af4b351ea8bad943c395ff5"
+    },
+    {
+      "path": "examples/2026-08-21/run/last-run.json",
+      "bytes": 4808,
+      "sha256": "54792b344ba08e5e689fed27cdc464f64f0337963af4b351ea8bad943c395ff5"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Bob/2027-Dashboard-BSIS-MISM-2026-08-21.json",
+      "bytes": 5879,
+      "sha256": "3e873406c95878022e8c8932390bff00fb2711b10bf4cb39a14f8600adf0b274"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Bob/2027-Dashboard-BSIS-MISM-2026-08-21.xlsx",
+      "bytes": 341294,
+      "sha256": "6a43ccd23ae73c6c82f6528e42e0cb0772694ea527fbe22c34a1e834815486ff"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Bob/2027-FullTime-BSIS-MISM-2026-08-21.pdf",
+      "bytes": 651350,
+      "sha256": "8b97904dd1bcf551ec678c93a889a7ea61ed06620939ea81a00153239ce2544e"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Bob/2027-WeeklyPlacement-BSIS-MISM.xlsx",
+      "bytes": 24771,
+      "sha256": "d3912ad0ca568475248bfbe96cac29fb9dfe25fd0b40da86e1840b45054df2f3"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Bob/box.eml",
+      "bytes": 34734,
+      "sha256": "cc54a1b70bd8f39060e28a86093bb9318a592266371a322d5cba698b4a77c732"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Bob/human.eml",
+      "bytes": 927582,
+      "sha256": "c72dfe7bd19cb38a0d6d5ed252e3a8e0d3610a74e53be83045d02cc138dbbe9b"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Bob/manifest.json",
+      "bytes": 1973,
+      "sha256": "764b70f986e32496293b8eb928de49ac0548c3d7a3c4e1253b5c4795ce189089"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Erica/2027-WeeklyPlacement-Healthcare.xlsx",
+      "bytes": 8931,
+      "sha256": "991e47cd6de19e7649712aab93fc61a490009c82e762448daad083d44a47d737"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Erica/box.eml",
+      "bytes": 13060,
+      "sha256": "68947bab8f2d99b0412bc6bd49d7dd3f6770074888d2a55a6fe8ee2aca534eb0"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Erica/human.eml",
+      "bytes": 13737,
+      "sha256": "56edb7c61c61da69f6d27de6d04a8b8eb77a3548d41a062828c4b1058cddaec5"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Erica/manifest.json",
+      "bytes": 1323,
+      "sha256": "7bc269a2500e2430e710f9c1ba81d80fd158fa9f45183e20ebbfa5ad53502ead"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Kurt/2027-Dashboard-BSGSCM-2026-08-21.json",
+      "bytes": 4082,
+      "sha256": "0d65769bb59ab9ce93dcc8a0e6170c22452044772ffed4d6da19a7e6edafb1a8"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Kurt/2027-Dashboard-BSGSCM-2026-08-21.xlsx",
+      "bytes": 340885,
+      "sha256": "75d7a1f1ce85d6e86d8f076be2e1ed1c9c96888c0b15833b08b92c605a72ed4c"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Kurt/2027-FullTime-BSGSCM-2026-08-21.pdf",
+      "bytes": 456732,
+      "sha256": "8ca49f5f6979fdf0c3b1aac587fdfc11d0dc6713ce2c0cf25c3cf080f9f1d418"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Kurt/2027-WeeklyPlacement-BSGSCM.xlsx",
+      "bytes": 20701,
+      "sha256": "3896315bdc19fddff95375cb9cc3f3442fc5f7f68b50ec3792bdf4a9d4541716"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Kurt/box.eml",
+      "bytes": 29160,
+      "sha256": "a20aee351d1a4dff8824a06afb1e5106f311298516ea925f1bf81ed4e4427d25"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Kurt/human.eml",
+      "bytes": 655665,
+      "sha256": "9c8ca190a9a2656d29d630e449b0d770ac2f68aa28076772928c1771b845b61e"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Kurt/manifest.json",
+      "bytes": 1911,
+      "sha256": "c8713e8dd2198fc979be0dfa6159dd0ef240ac77fbd7e4f522aa3f793c3537cd"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Mike/2027-Dashboard-BSMktg-2026-08-21.json",
+      "bytes": 4059,
+      "sha256": "4fecc5c0e2e4addf390532fa73fa607ef701bba181056480fd6df9f8806f368c"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Mike/2027-Dashboard-BSMktg-2026-08-21.xlsx",
+      "bytes": 340821,
+      "sha256": "e359686303b31cc18e2571f62f599b68a3542a1b167f781e6d233ab3030c2b43"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Mike/2027-FullTime-BSMktg-2026-08-21.pdf",
+      "bytes": 457780,
+      "sha256": "473e5d6192da69720782362b720dd40857b9c2fbbd3dd2c6effe1bb8ee15e1b6"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Mike/2027-WeeklyPlacement-BSMktg.xlsx",
+      "bytes": 17874,
+      "sha256": "fcbfcbcd81b28c6633b7d7f5b087b49c5595bc37c98590d55eb9e003053a5b95"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Mike/box.eml",
+      "bytes": 25288,
+      "sha256": "13c55ad4b0a78cde572b925d40d3490f8308dda97e9a8c7c0641e6f6f6660de4"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Mike/human.eml",
+      "bytes": 653231,
+      "sha256": "f78908a452973e4c0e27e84c12936cf55887082d1767d6451fecb66aab909ded"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Mike/manifest.json",
+      "bytes": 1911,
+      "sha256": "053b3d417fae84f4048e022531dd66dccd715df37642c3268656380c401c1e57"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Noelani/2027-Dashboard-BSEDM-2026-08-21.json",
+      "bytes": 4057,
+      "sha256": "3682f245d0b49582a0bba55955aa297efdac719a176b5da4638135c72b9a2eaf"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Noelani/2027-Dashboard-BSEDM-2026-08-21.xlsx",
+      "bytes": 340790,
+      "sha256": "ac999652dd48320414ee0a83c01d04a6774bae50b20a5fd9cc100448debbef80"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Noelani/2027-FullTime-BSEDM-2026-08-21.pdf",
+      "bytes": 458960,
+      "sha256": "84f2962e3b42b6352a508137571ff3ec8cfb02940830b052c1eeea7d3c18fc5e"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Noelani/2027-WeeklyPlacement-BSEDM.xlsx",
+      "bytes": 17863,
+      "sha256": "c3784e259865a7457365867a07dd1d8dcd0aac9049f3067568505701e0c07753"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Noelani/box.eml",
+      "bytes": 25274,
+      "sha256": "24c91448627b76e9c6c4c2b2d8edc279471ea9f84237887c286293c7748fa1d9"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Noelani/human.eml",
+      "bytes": 654830,
+      "sha256": "e5590238ed3b3a7f00f2f7ccead44195c322829d5c66fe088b3b95c57ad73937"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Noelani/manifest.json",
+      "bytes": 1909,
+      "sha256": "ce3cf09a4572d498dbd706437b7ef1bc9ef1bbebe4108a2a49b758e1b32c222b"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Perry/2027-Dashboard-MBA-2026-08-21.json",
+      "bytes": 4051,
+      "sha256": "f45ef3ac353e2226c6ac489a357d79bd6162a547423e2dbf77d4c89c49cb4b84"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Perry/2027-Dashboard-MBA-2026-08-21.xlsx",
+      "bytes": 340809,
+      "sha256": "de69ac4bbabffe7f37afe49d821daea82d52122e2c2864bf1e495d4e5fc35800"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Perry/2027-FullTime-MBA-2026-08-21.pdf",
+      "bytes": 459875,
+      "sha256": "18d2c788dcc2b243ff36c48a0ffaebddb82dc05978ffdbf667676fbdfd5f3ea7"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Perry/2027-WeeklyPlacement-MBA.xlsx",
+      "bytes": 17843,
+      "sha256": "d24516030efe063c52c23f7222ea6433e864f569b8403908cc53416c849f9ba5"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Perry/box.eml",
+      "bytes": 25242,
+      "sha256": "f81004f43ebf9f9a3d838028eea3a8a73022a5aaef513acd270fc64f27781e91"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Perry/human.eml",
+      "bytes": 656050,
+      "sha256": "b008d51a27772d3180a46903131b3d30f6905d3dcd66f3d77edfcbfcab679335"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Perry/manifest.json",
+      "bytes": 1901,
+      "sha256": "52baa5f722167b1340d99116ec66fba5b28cf591798a06499d2c8a99ca1f4138"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Soraya/2027-Dashboard-BSHRM-BSStrat-2026-08-21.json",
+      "bytes": 5630,
+      "sha256": "09ff653a152a479c1c7f26e34767fe2badcbf16aaf7b9d2b5cc5c2c252f52c88"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Soraya/2027-Dashboard-BSHRM-BSStrat-2026-08-21.xlsx",
+      "bytes": 341368,
+      "sha256": "3c60c2d18267458797786c16496a000ce24f9816e6ae77d3e3ffc4985495ba10"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Soraya/2027-FullTime-BSHRM-BSStrat-2026-08-21.pdf",
+      "bytes": 653790,
+      "sha256": "524ae2570df15f3838fa2fb47af5cb8ae7feb4c319f8fa98a7adc52b20b16b89"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Soraya/2027-WeeklyPlacement-BSHRM-BSStrat.xlsx",
+      "bytes": 27956,
+      "sha256": "ae45f34f522c7258b1526453aebe2de7640e0b907ae1970f95589f762f8301cd"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Soraya/box.eml",
+      "bytes": 39102,
+      "sha256": "4209882379fef6fec61fe5274416ba6ef7c9f65e6cac34aa2d9a9379eec9f5b1"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Soraya/human.eml",
+      "bytes": 935279,
+      "sha256": "ab40c0f8ac674e918ced4e00a627d083e405edf5feb9a7c93acaf7233210cda6"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Soraya/manifest.json",
+      "bytes": 1972,
+      "sha256": "c6e1cacdb37328c0ef2924991cde7455b98227348d950b5df3d385f94f3ee5d1"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Staci/2027-Dashboard-MPA-2026-08-21.json",
+      "bytes": 4056,
+      "sha256": "6402e56f5213c007ae27f93b62828d4225996cc461a9c69519eaa100f21ee648"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Staci/2027-Dashboard-MPA-2026-08-21.xlsx",
+      "bytes": 340732,
+      "sha256": "8d7629269ae8d0ab1e4401b2198d68c260b38e7f9f63d5e6b8c85ae3443d430b"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Staci/2027-FullTime-MPA-2026-08-21.pdf",
+      "bytes": 458440,
+      "sha256": "4277bdb21a80df2991b222acd14ced84e9ff5be887b6a5120fd563c6e75790df"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Staci/2027-WeeklyPlacement-MPA.xlsx",
+      "bytes": 17847,
+      "sha256": "c74dbd654a5cecd648889525e0819c728999e7f6d0e205fa197325ed4ee274d5"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Staci/box.eml",
+      "bytes": 25246,
+      "sha256": "c6df12727dddc842810d1670ec1598da1301b624e87891a6ac052fec59c9983a"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Staci/human.eml",
+      "bytes": 654088,
+      "sha256": "04d8695d03ba0621513102e14037c7db74d71e08c943b9e82aaebd7bd3ffdda3"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Staci/manifest.json",
+      "bytes": 1898,
+      "sha256": "735244349c6886fa083c1f873f55aafe60ba0066eeb3aba543c82afd611da629"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Steven/2027-Dashboard-BSEnt-BSBusM-2026-08-21.json",
+      "bytes": 5602,
+      "sha256": "2bf4fff749bfd052b07f78f92e98923eba7d209e29901cf4e70f9414b5ef8cbe"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Steven/2027-Dashboard-BSEnt-BSBusM-2026-08-21.xlsx",
+      "bytes": 341219,
+      "sha256": "a735347217291661e2a1f57357b977cb662f17e9b32b0083831355e2d6ce95df"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Steven/2027-FullTime-BSEnt-BSBusM-2026-08-21.pdf",
+      "bytes": 651972,
+      "sha256": "fd5649ed5cd5580b0bfdad5d4a264e7e33d81fce4305b659ed26649e56e7f7ca"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Steven/2027-WeeklyPlacement-BSEnt-BSBusM.xlsx",
+      "bytes": 28214,
+      "sha256": "1a09b829f10091a25a21bd65697f821305b62e49055be14fb11565d9ab1a48cc"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Steven/box.eml",
+      "bytes": 39452,
+      "sha256": "0cc189fc1330f2142cc031e885c74e3ec6c28afc50dacb6c6c44800a5e597255"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Steven/human.eml",
+      "bytes": 933139,
+      "sha256": "2f687858446198796e7b734dfabe54ee0e43310f5a3805c9065bf157953ff122"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Steven/manifest.json",
+      "bytes": 1964,
+      "sha256": "f3652bef2da3665351344a04400a8c9235a1efc94f42c9439530d36398a635b0"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tanya/2027-Dashboard-BSFin-2026-08-21.json",
+      "bytes": 4069,
+      "sha256": "8e82269f95d1096da029a5a8ac216948ae66bc9aa24a8599f20ec795af4e76aa"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tanya/2027-Dashboard-BSFin-2026-08-21.xlsx",
+      "bytes": 340917,
+      "sha256": "a1e94cc48b4b659a19aedd0457a6e1d44cf8867f78f805a81d2f19c03718d7ae"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tanya/2027-FullTime-BSFin-2026-08-21.pdf",
+      "bytes": 458113,
+      "sha256": "9282e75a6dbe6e159b15d39d651cc3d0fff26a4b9bba2ed4eb0e43f893bf8cb8"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tanya/2027-WeeklyPlacement-BSFin.xlsx",
+      "bytes": 20346,
+      "sha256": "4ec88903d6ac35afc418217948375c9520409cd2e25ccef1a41c54aeedb41267"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tanya/box.eml",
+      "bytes": 28668,
+      "sha256": "7708d051ecf881d9bc660d3b94a35e53414f4e552918c5cbcd2af9a769652534"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tanya/human.eml",
+      "bytes": 657073,
+      "sha256": "0a75174f1584c40c1b484cd6f2126cf3bb133f6342182453fe004475fee17763"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tanya/manifest.json",
+      "bytes": 1925,
+      "sha256": "e65a20ac83a0d57bce5fd1b1cfa6191839ea9862d70b7292d1ea8f4445e68fc6"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tracie/2027-Dashboard-BSAcc-MAcc-2026-08-21.json",
+      "bytes": 5669,
+      "sha256": "27e1af2b45859f5043eb9152b8212b86674987b4164517d826de40f30ccd28c5"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tracie/2027-Dashboard-BSAcc-MAcc-2026-08-21.xlsx",
+      "bytes": 341256,
+      "sha256": "85d0cd6416573b67ce9734e8ad991858bd448e3969e5f6f9a265f50a3bb69a2e"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tracie/2027-FullTime-BSAcc-MAcc-2026-08-21.pdf",
+      "bytes": 651267,
+      "sha256": "b9670b5d96f4af261e9e3320c66df948a195e737834c512a9456175e3ea6b1ff"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tracie/2027-WeeklyPlacement-BSAcc-MAcc.xlsx",
+      "bytes": 24922,
+      "sha256": "521c500c9688d9592f16abc8018f2c9aa1cf693ed0848b02b97d781d3da252f6"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tracie/box.eml",
+      "bytes": 34946,
+      "sha256": "8c0f17e0650437a2a47bd763e3b174e0d9849b74a54f7f646b1cd19ca75e06e5"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tracie/human.eml",
+      "bytes": 927664,
+      "sha256": "df62c2147deef4d8c7b350861cbc07150963455af33b1972b48ad9f78ba4b816"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/Tracie/manifest.json",
+      "bytes": 1953,
+      "sha256": "d491f2288987217fbad73964cef7e339ef3b1b661466b8f4856f642cfffd11f6"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/2027-Dashboard-Leadership-2026-08-21.json",
+      "bytes": 24816,
+      "sha256": "6c7ec872b9bf98dd6b4730e10bfdaf76f19e6fb95e640826dec7cc81b0a7bf6b"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/2027-Dashboard-Leadership-2026-08-21.xlsx",
+      "bytes": 345079,
+      "sha256": "61bcf681adbdd5449839aee3b8d8adf6b8f85ac0f3f345c6026f0ca8b4dbc0cd"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/2027-FullTime-Leadership-2026-08-21.pdf",
+      "bytes": 2981201,
+      "sha256": "be6079c9eef8b84b04d7571c0a6fdad31e9fc5ca0850d2aec4757535ff399ad6"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/2027_weekly_placement_report.xlsx",
+      "bytes": 160447,
+      "sha256": "ccfb6d2feda6746133b541ca7a257d560868b32fdb8e06ee6fa342163a8db248"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/box.eml",
+      "bytes": 220392,
+      "sha256": "45e5832f25b55ef10b53a1f934654b4a9c3a6925a4a123bc7302550f8187ecf6"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/human.eml",
+      "bytes": 4300561,
+      "sha256": "ec3a38d519e6ff242aa0114faada69bcd01e06660fb8286920fa44060ea71a1f"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/manifest.json",
+      "bytes": 2222,
+      "sha256": "c6dc1f36785cd1cfc0bea8af56b52d7d9869131c5d8e7dc6dd4cecff20ce556c"
+    },
+    {
+      "path": "examples/2026-08-21/run/preview/2026-08-21/2027/leadership/zoho.eml",
+      "bytes": 220358,
+      "sha256": "add7421fb381bd3774f63b33e208e044f7e7a99b8b8f4de29620de05afffe79b"
+    },
+    {
+      "path": "examples/2026-08-21/run/state/preview/2027.json",
+      "bytes": 293,
+      "sha256": "199c9ffd66619b3f1571b36b4976c91a57046c1a580b4eee10010d456957ec9f"
+    },
+    {
+      "path": "examples/2026-08-21/run.log",
+      "bytes": 594,
+      "sha256": "cbfaf46b5c15e455f7523138e2b7ef2aa92d377e56ec41a55cfda2e7774ef90b"
+    },
+    {
+      "path": "examples/2026-08-21/status.json",
+      "bytes": 4324,
+      "sha256": "6a873d840f8054c293480290cf7629139ad715167edc31f9ea94992c89f39416"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/AGENTS.md",
+      "bytes": 4081,
+      "sha256": "c8f0f096f728f3bd6a48ead9c87af55d1b87b766dd2ee320762b1a264446e115"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/CHANGES-2026-07-23.md",
+      "bytes": 4849,
+      "sha256": "e85797df87c4214bc0d8493f7f3febe74c7247b2cd3fe82d86ab582ee9c727ba"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/CHANGES-2026-09-24.md",
+      "bytes": 3910,
+      "sha256": "52857486d7d22a5213710d34a56032aac102559aea3758539f3f3d35aa51cbfc"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/DEPLOYMENT.md",
+      "bytes": 9512,
+      "sha256": "493624e1372fed1427a81524b2d2726990e5535c6ca1482ee68f6b3255b75797"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/DOCUMENTATION.md",
+      "bytes": 13471,
+      "sha256": "446fd20b394fb6c591b2ee5731a6143d7ab85a3b086df92a43895f7f1fcb5ff4"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/IMPLEMENTATION_PLAN.md",
+      "bytes": 86976,
+      "sha256": "e107c964d53cb33c2215e6e3a191cc65108b0a554b149cd9cf42f176cf064395"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/IMPLEMENTATION_STATUS.md",
+      "bytes": 7622,
+      "sha256": "0106270251747269d2fbf97531b3b617d2d0e289aa944dadf0ef9d35d3cf4ec4"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/LeadershipReport/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/LeadershipReport/email_overview_report.py",
+      "bytes": 521,
+      "sha256": "e8b7b49b3455d9e7f3df111f9d37ae9350d6fdd39febb532ac69d72b11920371"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/LeadershipReport/sql_queries.py",
+      "bytes": 5676,
+      "sha256": "0dc4ab20b12c35442bd9e3bfe2a3d52e9dfe48eefffac8a5658266182ec69272"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/LeadershipReport/update_overall_report.py",
+      "bytes": 35249,
+      "sha256": "d3c7f09d340780b46cfe61309911579f7b95c6b894578ff4043ba0e4a960c817"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/ProgramReports/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/ProgramReports/cd_sql_queries.py",
+      "bytes": 12272,
+      "sha256": "f1853dfaddf94ad05a4dfa7e0c63dc2f6d730b3ea60b6b84aa8a9fd31ef3c2fa"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/ProgramReports/create_program_reports.py",
+      "bytes": 18400,
+      "sha256": "b41073e1a8ca355f682ebdc41beb93fef82ca6dff01f52e2dca42c20c2d60671"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/ProgramReports/email_program_reports.py",
+      "bytes": 2749,
+      "sha256": "25272e153f21a5b02686cbd6e2c416762aaa300657f73b98d21122a3e8b57d5b"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/ProgramReports/email_templates.py",
+      "bytes": 4292,
+      "sha256": "237b5a31cf3fe9ff1c56d42cd81982092b1727ede706f19b9f544d18e115a07d"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/ProgramReports/placement_details.py",
+      "bytes": 6581,
+      "sha256": "b44e4b2aca043e647e39876e29bb68b2c0422f81f5c66119494684c89ec56550"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/READINESS_PLAN.md",
+      "bytes": 3444,
+      "sha256": "939e17199dd86ea944185ab9ae3b32a37ce42b68575959b451828b789bd0a8b3"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/README.md",
+      "bytes": 3729,
+      "sha256": "363222c480f184868aebd3786fea8ecad2a267c73bb96b046b702a372ea6dd4c"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/SOURCE_MANIFEST.json",
+      "bytes": 12307,
+      "sha256": "31b92e0fd360f6095d2bb3c61e76d9305f5d35aa0582fc9a4c03db0c269054bd"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/SOURCE_MAP.md",
+      "bytes": 1854,
+      "sha256": "0c674b401bbd0b443364c008ab6c1cbfee4bb23928ad3981bc9c32b42f48e67c"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/THIRD_PARTY_NOTICES.md",
+      "bytes": 821,
+      "sha256": "2a30accfa7690c7afd76af48f7fef3a03e86f979a8229829d4254dfc526367c7"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/VALIDATION_RESULTS.json",
+      "bytes": 3461,
+      "sha256": "22399ebfc15ea5b5efd1f1e8b64f24d7abf2ceb937e3b68ea5666385619c9e71"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/__main__.py",
+      "bytes": 1177,
+      "sha256": "4c0b60187bf2490ea31ca35527fe49a7a1226e454f443a75559987015cd3d914"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/assets/default_logo.png",
+      "bytes": 1289722,
+      "sha256": "8878506bd0e0640659bf48f3c8dbb9d06d42de292a22a827e6cfa18d7e8f3ca8"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/branding.py",
+      "bytes": 5011,
+      "sha256": "b5837e337411eb51b56c2d6e1d9bc1405162c9299eaacc37e1014385fff1fee4"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/build_visualization.py",
+      "bytes": 2420,
+      "sha256": "19991c4a78d91b461a01cd42eb83c1533207432e78d7f8487968acafee864d96"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/render_excel.py",
+      "bytes": 6330,
+      "sha256": "bf5f3605bcf9831864cfcded71ecd409ba467c0e1b57ade6936ca92129f59d39"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/templates/placement_dashboard_template.xlsx",
+      "bytes": 454198,
+      "sha256": "5441e0b2b4511884168cc34ef82ec46bcf66c1cb419ce03c7f60e7b6b940ca1a"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/update_dashboard.py",
+      "bytes": 19485,
+      "sha256": "a899039f5c07f2a4e89061d4910638e2cb04117ad7daa3993a80a808918b4cc0"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/Visualization/xlsx_package.py",
+      "bytes": 6294,
+      "sha256": "bea0a010a74a1ca734a6c2c2dce5b888efaf0e0aa06026edbc6ecc49925d568f"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/config/cohorts.yml",
+      "bytes": 3187,
+      "sha256": "23be747348e82d05c2aec017a170892db68b647d2455aafd9eb048d0f3e23a75"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/config/visualizations.yml",
+      "bytes": 456,
+      "sha256": "11fffa332c3db4d00f8a2d6d7ed9fdcdd1e2be3de059b1f552b70b0a24bdfa04"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/cohort_manager.py",
+      "bytes": 1016,
+      "sha256": "bb1ac8f1bc487ea937d90aceb404aee6b44e993e7fa1930104bae908067e1cbd"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/daily_runner.py",
+      "bytes": 9147,
+      "sha256": "67c93a102c0578363c2ea51204c04fae9183ba0822be89e8ec4e8bb665097758"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/database.py",
+      "bytes": 1293,
+      "sha256": "261414c02af5733cb15193e63861e14abdbda7e98b85b18326627aeeefb72bb6"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/delivery.py",
+      "bytes": 5382,
+      "sha256": "eedcc2b4292f10fa4ded5c4a446097884c7bee4ccde17edd2d0d1d8b9d098da6"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/doctor.py",
+      "bytes": 9564,
+      "sha256": "c0bbc27c0f80e6c03f7d79cf28428f275adbb1c4723b155542795050d115cc33"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/pipeline.py",
+      "bytes": 13782,
+      "sha256": "1d6c8e238652a67ad8bc21e3e7e6041a5c36bbf488ef3328fc201989026842fd"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/report_artifacts.py",
+      "bytes": 1303,
+      "sha256": "43d2fcc4f26035aaf0d1df3212f9fec990de90a82be72fa579e5c6f785b26be7"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/report_targets.py",
+      "bytes": 1269,
+      "sha256": "6a09df244c7b62bfd867cc7a95897347dd6c88c0761140ef7adc652e76ce3e78"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/run_records.py",
+      "bytes": 1290,
+      "sha256": "5e0327acf2e7437a05cb3c5dd0e844ddb791b7ddf3afb33b56b2f922c2a2e444"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/core/status.py",
+      "bytes": 5463,
+      "sha256": "dce42d0c72abe111651e982070fed5a94729739f9fe388fd303bd36a6487d523"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/requirements.txt",
+      "bytes": 225,
+      "sha256": "fc3cffaba9d094cee39af88fe865c47c8915773f33f6d6f7188e164a372f6270"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/LeadershipReport/Reports/2026_weekly_placement_report.xlsx",
+      "bytes": 349035,
+      "sha256": "39a65c649748f857cc469ba34443c476ba2ed4ae8ba51c7246c136e1ae56a6c6"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/LeadershipReport/Reports/2027_weekly_placement_report.xlsx",
+      "bytes": 160447,
+      "sha256": "ccfb6d2feda6746133b541ca7a257d560868b32fdb8e06ee6fa342163a8db248"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSAcc-MAcc.xlsx",
+      "bytes": 24922,
+      "sha256": "521c500c9688d9592f16abc8018f2c9aa1cf693ed0848b02b97d781d3da252f6"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSEDM.xlsx",
+      "bytes": 17863,
+      "sha256": "c3784e259865a7457365867a07dd1d8dcd0aac9049f3067568505701e0c07753"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSEnt-BSBusM.xlsx",
+      "bytes": 28214,
+      "sha256": "1a09b829f10091a25a21bd65697f821305b62e49055be14fb11565d9ab1a48cc"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSFin.xlsx",
+      "bytes": 20346,
+      "sha256": "4ec88903d6ac35afc418217948375c9520409cd2e25ccef1a41c54aeedb41267"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSGSCM.xlsx",
+      "bytes": 20701,
+      "sha256": "3896315bdc19fddff95375cb9cc3f3442fc5f7f68b50ec3792bdf4a9d4541716"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSHRM-BSStrat.xlsx",
+      "bytes": 27956,
+      "sha256": "ae45f34f522c7258b1526453aebe2de7640e0b907ae1970f95589f762f8301cd"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSIS-MISM.xlsx",
+      "bytes": 24771,
+      "sha256": "d3912ad0ca568475248bfbe96cac29fb9dfe25fd0b40da86e1840b45054df2f3"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSMktg.xlsx",
+      "bytes": 17874,
+      "sha256": "fcbfcbcd81b28c6633b7d7f5b087b49c5595bc37c98590d55eb9e003053a5b95"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-Healthcare.xlsx",
+      "bytes": 8931,
+      "sha256": "991e47cd6de19e7649712aab93fc61a490009c82e762448daad083d44a47d737"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-MBA.xlsx",
+      "bytes": 17843,
+      "sha256": "d24516030efe063c52c23f7222ea6433e864f569b8403908cc53416c849f9ba5"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-MPA.xlsx",
+      "bytes": 17847,
+      "sha256": "c74dbd654a5cecd648889525e0819c728999e7f6d0e205fa197325ed4ee274d5"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/test_automation.py",
+      "bytes": 16122,
+      "sha256": "5b2a06ee571a07606c86e07835d0a658c5f556ffaae0aaa296f26358d5f2542c"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/test_operations.py",
+      "bytes": 15819,
+      "sha256": "0397c1b23e170b7d99883988656d06f628dda6383d127e945f20d87d51da3fa9"
+    },
+    {
+      "path": "raspberryPI/PlacementRateReports/tests/validation-log.txt",
+      "bytes": 5152,
+      "sha256": "7f512b8819a53a6b29d0f67e2e621bce34b6df9356159fd5dffb87660781e60a"
+    },
+    {
+      "path": "raspberryPI/requirements.txt",
+      "bytes": 460,
+      "sha256": "7deb98e34bde3201d7a46adefafe955d5b0b87692679fc430e42915fa68271ad"
+    },
+    {
+      "path": "run_example.py",
+      "bytes": 1373,
+      "sha256": "49c8b0f67a5a16e5a41520effc2dbbfcde42967ba5ff19c32c427d2fa8f2dd77"
+    }
+  ]
+}

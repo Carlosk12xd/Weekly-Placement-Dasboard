@@ -1,0 +1,80 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "leadership",
+    "programs": null,
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:52:24.683321+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027_weekly_placement_report.xlsx",
+      "sha256": "ccfb6d2feda6746133b541ca7a257d560868b32fdb8e06ee6fa342163a8db248"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-Leadership-2026-08-21.xlsx",
+      "sha256": "61bcf681adbdd5449839aee3b8d8adf6b8f85ac0f3f345c6026f0ca8b4dbc0cd",
+      "metadata_sha256": "6c7ec872b9bf98dd6b4730e10bfdaf76f19e6fb95e640826dec7cc81b0a7bf6b"
+    },
+    "pdf": {
+      "file": "2027-FullTime-Leadership-2026-08-21.pdf",
+      "sha256": "be6079c9eef8b84b04d7571c0a6fdad31e9fc5ca0850d2aec4757535ff399ad6",
+      "pages": 16,
+      "bytes": 2981201,
+      "elapsed_seconds": 40.58,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSAcc",
+        "BSEDM",
+        "BSEnt",
+        "BSFin",
+        "BSGSCM",
+        "BSHRM",
+        "BSIS",
+        "BSBusM",
+        "BSMktg",
+        "BSStrat",
+        "MAcc",
+        "MBA",
+        "MISM",
+        "MPA"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "45e5832f25b55ef10b53a1f934654b4a9c3a6925a4a123bc7302550f8187ecf6",
+      "envelope": [
+        "Weekly_.s6hnpjy9ndw59xsf@u.box.com"
+      ],
+      "bytes": 220392,
+      "attempts": []
+    },
+    "zoho": {
+      "state": "prepared",
+      "file": "zoho.eml",
+      "sha256": "add7421fb381bd3774f63b33e208e044f7e7a99b8b8f4de29620de05afffe79b",
+      "envelope": [],
+      "bytes": 220358,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "ec3a38d519e6ff242aa0114faada69bcd01e06660fb8286920fa44060ea71a1f",
+      "envelope": [],
+      "bytes": 4300561,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "ccfb6d2feda6746133b541ca7a257d560868b32fdb8e06ee6fa342163a8db248",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

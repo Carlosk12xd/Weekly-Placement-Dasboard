@@ -1,0 +1,219 @@
+{
+  "run_id": "20260928T195224-5e7858d30013",
+  "date": "2026-08-21",
+  "mode": 0,
+  "started_at": "2026-09-28T19:52:24.289676+00:00",
+  "updated_at": "2026-09-28T19:57:41.782590+00:00",
+  "finished_at": "2026-09-28T19:57:41.782580+00:00",
+  "dry_run": true,
+  "offline": true,
+  "pilot": false,
+  "stage": "finished",
+  "status": "completed",
+  "hashes_checked": true,
+  "bundles": [
+    {
+      "cohort": "2027",
+      "audience": "leadership",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "zoho": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Tracie",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Noelani",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Soraya",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Tanya",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Kurt",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Steven",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Bob",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Mike",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Perry",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Staci",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    },
+    {
+      "cohort": "2027",
+      "audience": "Erica",
+      "status": "preview",
+      "error": null,
+      "artifacts": [
+        "xlsx"
+      ],
+      "human_held": null,
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      },
+      "hashes": "verified"
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "run_id": "20260928T195224-5e7858d30013",
+  "date": "2026-08-21",
+  "started_at": "2026-09-28T19:52:24.289676+00:00",
+  "status": "completed",
+  "stage": "finished",
+  "scheduled": true,
+  "results": [
+    {
+      "cohort": "2027",
+      "audience": "leadership",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/leadership",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "zoho": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Tracie",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Tracie",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Noelani",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Noelani",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Soraya",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Soraya",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Tanya",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Tanya",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Kurt",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Kurt",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Steven",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Steven",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Bob",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Bob",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Mike",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Mike",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Perry",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Perry",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Staci",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Staci",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "dashboard",
+        "pdf",
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    },
+    {
+      "cohort": "2027",
+      "audience": "Erica",
+      "status": "preview",
+      "directory": "preview/2026-08-21/2027/Erica",
+      "error": null,
+      "human_held": null,
+      "artifacts": [
+        "xlsx"
+      ],
+      "routes": {
+        "box": "prepared",
+        "human": "prepared"
+      }
+    }
+  ],
+  "offline": true,
+  "retry": false,
+  "pilot": false,
+  "requested_cohorts": [
+    "2027"
+  ],
+  "requested_audiences": [],
+  "updated_at": "2026-09-28T19:57:41.782590+00:00",
+  "mode": 0,
+  "dry_run": true,
+  "dashboard_only": false,
+  "cohorts": [
+    "2027"
+  ],
+  "expected_bundles": 12,
+  "finished_at": "2026-09-28T19:57:41.782580+00:00"
+}

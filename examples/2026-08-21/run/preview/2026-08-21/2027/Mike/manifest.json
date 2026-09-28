@@ -1,0 +1,66 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Mike",
+    "programs": [
+      "BSMktg"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:56:10.423477+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSMktg.xlsx",
+      "sha256": "fcbfcbcd81b28c6633b7d7f5b087b49c5595bc37c98590d55eb9e003053a5b95"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSMktg-2026-08-21.xlsx",
+      "sha256": "e359686303b31cc18e2571f62f599b68a3542a1b167f781e6d233ab3030c2b43",
+      "metadata_sha256": "4fecc5c0e2e4addf390532fa73fa607ef701bba181056480fd6df9f8806f368c"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSMktg-2026-08-21.pdf",
+      "sha256": "473e5d6192da69720782362b720dd40857b9c2fbbd3dd2c6effe1bb8ee15e1b6",
+      "pages": 3,
+      "bytes": 457780,
+      "elapsed_seconds": 30.44,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSMktg"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "13c55ad4b0a78cde572b925d40d3490f8308dda97e9a8c7c0641e6f6f6660de4",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 25288,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "f78908a452973e4c0e27e84c12936cf55887082d1767d6451fecb66aab909ded",
+      "envelope": [
+        "mike.neuffer@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 653231,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "fcbfcbcd81b28c6633b7d7f5b087b49c5595bc37c98590d55eb9e003053a5b95",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

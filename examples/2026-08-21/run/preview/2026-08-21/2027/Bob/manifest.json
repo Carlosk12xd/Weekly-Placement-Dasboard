@@ -1,0 +1,69 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Bob",
+    "programs": [
+      "BSIS",
+      "MISM"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:55:40.193031+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSIS-MISM.xlsx",
+      "sha256": "d3912ad0ca568475248bfbe96cac29fb9dfe25fd0b40da86e1840b45054df2f3"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSIS-MISM-2026-08-21.xlsx",
+      "sha256": "6a43ccd23ae73c6c82f6528e42e0cb0772694ea527fbe22c34a1e834815486ff",
+      "metadata_sha256": "3e873406c95878022e8c8932390bff00fb2711b10bf4cb39a14f8600adf0b274"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSIS-MISM-2026-08-21.pdf",
+      "sha256": "8b97904dd1bcf551ec678c93a889a7ea61ed06620939ea81a00153239ce2544e",
+      "pages": 4,
+      "bytes": 651350,
+      "elapsed_seconds": 27.94,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSIS",
+        "MISM"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "cc54a1b70bd8f39060e28a86093bb9318a592266371a322d5cba698b4a77c732",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 34734,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "c72dfe7bd19cb38a0d6d5ed252e3a8e0d3610a74e53be83045d02cc138dbbe9b",
+      "envelope": [
+        "bob.ure@byu.edu",
+        "Audrey.Seager@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 927582,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "d3912ad0ca568475248bfbe96cac29fb9dfe25fd0b40da86e1840b45054df2f3",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

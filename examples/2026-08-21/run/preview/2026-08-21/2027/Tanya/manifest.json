@@ -1,0 +1,67 @@
+{
+  "identity": {
+    "cohort": "2027",
+    "report_date": "2026-08-21",
+    "mode": 0,
+    "audience": "Tanya",
+    "programs": [
+      "BSFin"
+    ],
+    "offline": true
+  },
+  "created_at": "2026-09-28T19:54:19.025785+00:00",
+  "artifacts": {
+    "xlsx": {
+      "file": "2027-WeeklyPlacement-BSFin.xlsx",
+      "sha256": "4ec88903d6ac35afc418217948375c9520409cd2e25ccef1a41c54aeedb41267"
+    },
+    "dashboard": {
+      "file": "2027-Dashboard-BSFin-2026-08-21.xlsx",
+      "sha256": "a1e94cc48b4b659a19aedd0457a6e1d44cf8867f78f805a81d2f19c03718d7ae",
+      "metadata_sha256": "8e82269f95d1096da029a5a8ac216948ae66bc9aa24a8599f20ec795af4e76aa"
+    },
+    "pdf": {
+      "file": "2027-FullTime-BSFin-2026-08-21.pdf",
+      "sha256": "9282e75a6dbe6e159b15d39d651cc3d0fff26a4b9bba2ed4eb0e43f893bf8cb8",
+      "pages": 3,
+      "bytes": 458113,
+      "elapsed_seconds": 23.98,
+      "sheet_order": [
+        "MSB Full-Time Dashboard",
+        "BSFin"
+      ]
+    }
+  },
+  "routes": {
+    "box": {
+      "state": "prepared",
+      "file": "box.eml",
+      "sha256": "7708d051ecf881d9bc660d3b94a35e53414f4e552918c5cbcd2af9a769652534",
+      "envelope": [
+        "Career_.3zgujw52rpd63rhk@u.box.com"
+      ],
+      "bytes": 28668,
+      "attempts": []
+    },
+    "human": {
+      "state": "prepared",
+      "file": "human.eml",
+      "sha256": "0a75174f1584c40c1b484cd6f2126cf3bb133f6342182453fe004475fee17763",
+      "envelope": [
+        "tharmon@byu.edu",
+        "amy@byu.edu",
+        "Jonathan.Creer@byu.edu",
+        "bccdata@byu.edu",
+        "quinn_frazier@byu.edu"
+      ],
+      "bytes": 657073,
+      "attempts": []
+    }
+  },
+  "profile_sha256": "832196495d9c83fc5ec761c8374870bcf3132716868e6b3fee8c61c862b61dff",
+  "source_warnings": [],
+  "source_rolling_sha256": "4ec88903d6ac35afc418217948375c9520409cd2e25ccef1a41c54aeedb41267",
+  "human_policy_enabled": true,
+  "pdf_required": true,
+  "status": "preview"
+}

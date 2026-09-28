@@ -1,0 +1,29 @@
+# Combined Python dependencies for:
+# - BCCRobot
+# - PlacementRateReports
+# - Quinncia
+# - ZohoCRM
+#
+# Install with:
+#   pip install -r requirements.txt
+
+beautifulsoup4
+feedparser
+google-api-python-client
+google-auth
+google-auth-oauthlib
+mysql-connector-python
+numpy
+openpyxl
+pandas
+PyYAML
+pymsteams
+python-dateutil
+python-dotenv
+rapidfuzz
+requests
+selenium
+sqlalchemy
+tqdm
+# Placement dashboard rendering dependencies
+-r PlacementRateReports/requirements.txt

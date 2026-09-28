@@ -1,0 +1,73 @@
+current_date_source: "system"
+# Release default: preview only. Set true after the target-Pi pilot to activate cron delivery.
+# --send enables delivery for one live run; --dry-run always suppresses it.
+delivery_enabled: false
+
+# EXAMPLE / EXPLANATION
+# - id: class graduation year
+#     label: "Class of 2026" or whatever year it is
+#     start_date: "2025-06-23" the start of the summer term for that grad class
+#     grad_date:  "2026-06-22" the end of the spring term for that grad class
+#     internship_years: these are used for the SQL queries. Do the next 3 years after the grad year
+#       - "2027"
+#       - "2028"
+#       - "2029"
+#     overview_template: "weekly_overview/weekly_placement_report_2026.xlsx" This should be the location of the overview template. Include the proper name for the file.
+#     semester_byu: thesea re also used for the SQL queries, ensuring that students who begin the program in the fall semester of the grad year aren't accidentally included. More of a safety net than anything else. It will be the class year and the two years after it with a 5 on the end
+#       - "20265"
+#       - "20275"
+#       - "20285"
+#     weekly_box_leadership: "Weekly_.ks03b87haffqh0kh@u.box.com" - The next four are the box upload folders, one for each type of report
+#     weekly_box_programs: "Program.ccc13xxgj7i3my0f@u.box.com"
+#     monthly_box_leadership: "Monthly.7snc5hlyjlvs5zn8@u.box.com"
+#     monthly_box_programs: "Program.z7oooee224ngl6hn@u.box.com"
+#     enabled: true. Always have it enabled unless the cutoff 90 day grace period has already ended. Then it is lkay to disable them or even delete them if wanted
+
+
+cohorts:
+
+  - id: "2026"
+    human_modes: [0, 1, 2]
+    label: "Class of 2026"
+    start_date: "2025-06-23"
+    grad_date:  "2026-06-22"
+    internship_years: 
+      - "2027"
+      - "2028"
+      - "2029"
+    overview_template: "LeadershipReport/Reports/2026_weekly_placement_report.xlsx"
+    semester_byu:
+      - "20265"
+      - "20275"
+      - "20285"
+    weekly_box_leadership: "Weekly_.s6hnpjy9ndw59xsf@u.box.com"
+    weekly_box_programs: "Career_.3zgujw52rpd63rhk@u.box.com"
+    monthly_box_leadership: "Monthly.99migji9fs5gbubb@u.box.com"
+    monthly_box_programs: "Career_.41ofhvei7rdketxz@u.box.com"
+    enabled: true
+
+  - id: "2027"
+    human_modes: [0, 2]
+    label: "Class of 2027"
+    start_date: "2026-06-22"
+    grad_date: "2027-06-21"
+    internship_years: 
+      - "2028"
+      - "2029"
+      - "2030"
+    overview_template: "LeadershipReport/Reports/2027_weekly_placement_report.xlsx"
+    semester_byu:
+      - "20275"
+      - "20285"
+      - "20295"
+    # Same Box folders as the 2026 cohort. These were previously the placeholder
+    # addresses copied verbatim from the example block at the top of this file,
+    # so 2027 uploads were not landing in a real folder. Changed 2026-07-23.
+    weekly_box_leadership: "Weekly_.s6hnpjy9ndw59xsf@u.box.com"
+    weekly_box_programs: "Career_.3zgujw52rpd63rhk@u.box.com"
+    monthly_box_leadership: "Monthly.99migji9fs5gbubb@u.box.com"
+    monthly_box_programs: "Career_.41ofhvei7rdketxz@u.box.com"
+    enabled: true
+
+
+tracking_grace_period_days: 90    # 3 months ~ 90 days

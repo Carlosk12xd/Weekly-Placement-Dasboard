@@ -1,0 +1,313 @@
+{
+  "prepared": "2026-09-24",
+  "original_archive_sha256": "4727bdef830dc627d3665767d93a4a59ee4ced5e1961af6cddb277b06e6826aa",
+  "renderer_source_commit": "471bf7174d44a0ab08439128d4853096d0fbc693",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "c8f0f096f728f3bd6a48ead9c87af55d1b87b766dd2ee320762b1a264446e115",
+      "original_sha256": null
+    },
+    {
+      "path": "CHANGES-2026-07-23.md",
+      "sha256": "e85797df87c4214bc0d8493f7f3febe74c7247b2cd3fe82d86ab582ee9c727ba",
+      "original_sha256": "e85797df87c4214bc0d8493f7f3febe74c7247b2cd3fe82d86ab582ee9c727ba"
+    },
+    {
+      "path": "CHANGES-2026-09-24.md",
+      "sha256": "52857486d7d22a5213710d34a56032aac102559aea3758539f3f3d35aa51cbfc",
+      "original_sha256": null
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "sha256": "493624e1372fed1427a81524b2d2726990e5535c6ca1482ee68f6b3255b75797",
+      "original_sha256": null
+    },
+    {
+      "path": "DOCUMENTATION.md",
+      "sha256": "446fd20b394fb6c591b2ee5731a6143d7ab85a3b086df92a43895f7f1fcb5ff4",
+      "original_sha256": "1c9b0c823a808dd3884327c6fc0557b6dc918c0ad3d7350346c9b521ce6593b5"
+    },
+    {
+      "path": "IMPLEMENTATION_PLAN.md",
+      "sha256": "e107c964d53cb33c2215e6e3a191cc65108b0a554b149cd9cf42f176cf064395",
+      "original_sha256": null
+    },
+    {
+      "path": "IMPLEMENTATION_STATUS.md",
+      "sha256": "0106270251747269d2fbf97531b3b617d2d0e289aa944dadf0ef9d35d3cf4ec4",
+      "original_sha256": null
+    },
+    {
+      "path": "LeadershipReport/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_sha256": null
+    },
+    {
+      "path": "LeadershipReport/email_overview_report.py",
+      "sha256": "e8b7b49b3455d9e7f3df111f9d37ae9350d6fdd39febb532ac69d72b11920371",
+      "original_sha256": "a85ed59963c5d44d29c1312300efeeda6beea3ad4855e13384bf72c527211d00"
+    },
+    {
+      "path": "LeadershipReport/sql_queries.py",
+      "sha256": "0dc4ab20b12c35442bd9e3bfe2a3d52e9dfe48eefffac8a5658266182ec69272",
+      "original_sha256": "0dc4ab20b12c35442bd9e3bfe2a3d52e9dfe48eefffac8a5658266182ec69272"
+    },
+    {
+      "path": "LeadershipReport/update_overall_report.py",
+      "sha256": "d3c7f09d340780b46cfe61309911579f7b95c6b894578ff4043ba0e4a960c817",
+      "original_sha256": "1ee74c9849e8b9bf9fabda3fede4da744c38f39fbc7f9fa8cc7688a2049ef577"
+    },
+    {
+      "path": "ProgramReports/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_sha256": null
+    },
+    {
+      "path": "ProgramReports/cd_sql_queries.py",
+      "sha256": "f1853dfaddf94ad05a4dfa7e0c63dc2f6d730b3ea60b6b84aa8a9fd31ef3c2fa",
+      "original_sha256": "f1853dfaddf94ad05a4dfa7e0c63dc2f6d730b3ea60b6b84aa8a9fd31ef3c2fa"
+    },
+    {
+      "path": "ProgramReports/create_program_reports.py",
+      "sha256": "b41073e1a8ca355f682ebdc41beb93fef82ca6dff01f52e2dca42c20c2d60671",
+      "original_sha256": "39e5ede8dfeca4745106389158c604799ae6e26c05288c004e7b96d712214181"
+    },
+    {
+      "path": "ProgramReports/email_program_reports.py",
+      "sha256": "25272e153f21a5b02686cbd6e2c416762aaa300657f73b98d21122a3e8b57d5b",
+      "original_sha256": "5620c3f4bbe97ae4e8b10e761ba95abe693f0ac52d06f2651868bbe4ea203b95"
+    },
+    {
+      "path": "ProgramReports/email_templates.py",
+      "sha256": "237b5a31cf3fe9ff1c56d42cd81982092b1727ede706f19b9f544d18e115a07d",
+      "original_sha256": "4b7c24531fdc2faaf6972530986426c1803cdec6705913413ed9a75983382ae8"
+    },
+    {
+      "path": "ProgramReports/placement_details.py",
+      "sha256": "b44e4b2aca043e647e39876e29bb68b2c0422f81f5c66119494684c89ec56550",
+      "original_sha256": "ff4d6241571b67e7d536c52d482cc004c3391a3b829133f9290170233e9b45df"
+    },
+    {
+      "path": "READINESS_PLAN.md",
+      "sha256": "939e17199dd86ea944185ab9ae3b32a37ce42b68575959b451828b789bd0a8b3",
+      "original_sha256": null
+    },
+    {
+      "path": "README.md",
+      "sha256": "363222c480f184868aebd3786fea8ecad2a267c73bb96b046b702a372ea6dd4c",
+      "original_sha256": "aff1858f3d1244bbd5b82809a6747b150cd9a0722866e4338307094f49fc62db"
+    },
+    {
+      "path": "SOURCE_MAP.md",
+      "sha256": "0c674b401bbd0b443364c008ab6c1cbfee4bb23928ad3981bc9c32b42f48e67c",
+      "original_sha256": null
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "2a30accfa7690c7afd76af48f7fef3a03e86f979a8229829d4254dfc526367c7",
+      "original_sha256": null
+    },
+    {
+      "path": "VALIDATION_RESULTS.json",
+      "sha256": "22399ebfc15ea5b5efd1f1e8b64f24d7abf2ceb937e3b68ea5666385619c9e71",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/__main__.py",
+      "sha256": "4c0b60187bf2490ea31ca35527fe49a7a1226e454f443a75559987015cd3d914",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/assets/default_logo.png",
+      "sha256": "8878506bd0e0640659bf48f3c8dbb9d06d42de292a22a827e6cfa18d7e8f3ca8",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/branding.py",
+      "sha256": "b5837e337411eb51b56c2d6e1d9bc1405162c9299eaacc37e1014385fff1fee4",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/build_visualization.py",
+      "sha256": "19991c4a78d91b461a01cd42eb83c1533207432e78d7f8487968acafee864d96",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/render_excel.py",
+      "sha256": "bf5f3605bcf9831864cfcded71ecd409ba467c0e1b57ade6936ca92129f59d39",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/templates/placement_dashboard_template.xlsx",
+      "sha256": "5441e0b2b4511884168cc34ef82ec46bcf66c1cb419ce03c7f60e7b6b940ca1a",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/update_dashboard.py",
+      "sha256": "a899039f5c07f2a4e89061d4910638e2cb04117ad7daa3993a80a808918b4cc0",
+      "original_sha256": null
+    },
+    {
+      "path": "Visualization/xlsx_package.py",
+      "sha256": "bea0a010a74a1ca734a6c2c2dce5b888efaf0e0aa06026edbc6ecc49925d568f",
+      "original_sha256": null
+    },
+    {
+      "path": "config/cohorts.yml",
+      "sha256": "23be747348e82d05c2aec017a170892db68b647d2455aafd9eb048d0f3e23a75",
+      "original_sha256": "e79451b6809946983969102bc40a161366d5a210405724221cd6616fc9f99999"
+    },
+    {
+      "path": "config/visualizations.yml",
+      "sha256": "11fffa332c3db4d00f8a2d6d7ed9fdcdd1e2be3de059b1f552b70b0a24bdfa04",
+      "original_sha256": null
+    },
+    {
+      "path": "core/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_sha256": null
+    },
+    {
+      "path": "core/cohort_manager.py",
+      "sha256": "bb1ac8f1bc487ea937d90aceb404aee6b44e993e7fa1930104bae908067e1cbd",
+      "original_sha256": "0927bfdece2a48b52bb73763b0499c359350169324aa1df776d679f4d9eb1af3"
+    },
+    {
+      "path": "core/daily_runner.py",
+      "sha256": "67c93a102c0578363c2ea51204c04fae9183ba0822be89e8ec4e8bb665097758",
+      "original_sha256": "17fa342efe3460f9cb4097d85200b45b687b6c4ee587536a8e69e73ccc4c0a46"
+    },
+    {
+      "path": "core/database.py",
+      "sha256": "261414c02af5733cb15193e63861e14abdbda7e98b85b18326627aeeefb72bb6",
+      "original_sha256": null
+    },
+    {
+      "path": "core/delivery.py",
+      "sha256": "eedcc2b4292f10fa4ded5c4a446097884c7bee4ccde17edd2d0d1d8b9d098da6",
+      "original_sha256": null
+    },
+    {
+      "path": "core/doctor.py",
+      "sha256": "c0bbc27c0f80e6c03f7d79cf28428f275adbb1c4723b155542795050d115cc33",
+      "original_sha256": null
+    },
+    {
+      "path": "core/pipeline.py",
+      "sha256": "1d6c8e238652a67ad8bc21e3e7e6041a5c36bbf488ef3328fc201989026842fd",
+      "original_sha256": null
+    },
+    {
+      "path": "core/report_artifacts.py",
+      "sha256": "43d2fcc4f26035aaf0d1df3212f9fec990de90a82be72fa579e5c6f785b26be7",
+      "original_sha256": null
+    },
+    {
+      "path": "core/report_targets.py",
+      "sha256": "6a09df244c7b62bfd867cc7a95897347dd6c88c0761140ef7adc652e76ce3e78",
+      "original_sha256": null
+    },
+    {
+      "path": "core/run_records.py",
+      "sha256": "5e0327acf2e7437a05cb3c5dd0e844ddb791b7ddf3afb33b56b2f922c2a2e444",
+      "original_sha256": null
+    },
+    {
+      "path": "core/status.py",
+      "sha256": "dce42d0c72abe111651e982070fed5a94729739f9fe388fd303bd36a6487d523",
+      "original_sha256": null
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "fc3cffaba9d094cee39af88fe865c47c8915773f33f6d6f7188e164a372f6270",
+      "original_sha256": "344feb411e503f0a4337ccc275b918219d17972525f62d716f635af226611812"
+    },
+    {
+      "path": "tests/fixtures/LeadershipReport/Reports/2026_weekly_placement_report.xlsx",
+      "sha256": "39a65c649748f857cc469ba34443c476ba2ed4ae8ba51c7246c136e1ae56a6c6",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/LeadershipReport/Reports/2027_weekly_placement_report.xlsx",
+      "sha256": "ccfb6d2feda6746133b541ca7a257d560868b32fdb8e06ee6fa342163a8db248",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSAcc-MAcc.xlsx",
+      "sha256": "521c500c9688d9592f16abc8018f2c9aa1cf693ed0848b02b97d781d3da252f6",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSEDM.xlsx",
+      "sha256": "c3784e259865a7457365867a07dd1d8dcd0aac9049f3067568505701e0c07753",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSEnt-BSBusM.xlsx",
+      "sha256": "1a09b829f10091a25a21bd65697f821305b62e49055be14fb11565d9ab1a48cc",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSFin.xlsx",
+      "sha256": "4ec88903d6ac35afc418217948375c9520409cd2e25ccef1a41c54aeedb41267",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSGSCM.xlsx",
+      "sha256": "3896315bdc19fddff95375cb9cc3f3442fc5f7f68b50ec3792bdf4a9d4541716",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSHRM-BSStrat.xlsx",
+      "sha256": "ae45f34f522c7258b1526453aebe2de7640e0b907ae1970f95589f762f8301cd",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSIS-MISM.xlsx",
+      "sha256": "d3912ad0ca568475248bfbe96cac29fb9dfe25fd0b40da86e1840b45054df2f3",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSMktg.xlsx",
+      "sha256": "fcbfcbcd81b28c6633b7d7f5b087b49c5595bc37c98590d55eb9e003053a5b95",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-Healthcare.xlsx",
+      "sha256": "991e47cd6de19e7649712aab93fc61a490009c82e762448daad083d44a47d737",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-MBA.xlsx",
+      "sha256": "d24516030efe063c52c23f7222ea6433e864f569b8403908cc53416c849f9ba5",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/fixtures/ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-MPA.xlsx",
+      "sha256": "c74dbd654a5cecd648889525e0819c728999e7f6d0e205fa197325ed4ee274d5",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/test_automation.py",
+      "sha256": "5b2a06ee571a07606c86e07835d0a658c5f556ffaae0aaa296f26358d5f2542c",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/test_operations.py",
+      "sha256": "0397c1b23e170b7d99883988656d06f628dda6383d127e945f20d87d51da3fa9",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/validation-log.txt",
+      "sha256": "7f512b8819a53a6b29d0f67e2e621bce34b6df9356159fd5dffb87660781e60a",
+      "original_sha256": null
+    }
+  ],
+  "previous_release": "2026-09-23"
+}
