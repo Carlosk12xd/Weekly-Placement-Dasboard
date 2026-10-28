@@ -1,6 +1,6 @@
 # Current report automation
 
-Updated September 24, 2026. This document describes implemented code. The original
+Updated October 21, 2026. This document describes implemented code. The original
 planning baseline is retained in IMPLEMENTATION_PLAN.md. See IMPLEMENTATION_STATUS.md
 for which checks were executed and which still require the actual Pi.
 
@@ -9,8 +9,10 @@ for which checks were executed and which still require the actual Pi.
 `core.daily_runner.main()` is the only scheduled entry point. Imports do not load
 credentials, query SQL, mutate workbooks or send emails. The existing daily cron
 is retained: mode 0 is Friday, mode 1 is month end, mode 2 is both, and other days
-exit. Cohort eligibility still uses inclusive configured start/graduation-plus-
-grace dates. Class 2027 ends September 19, 2027 under the supplied configuration.
+exit. A class is tracked from its configured start date (the last week of June Y-1)
+through September 30 of Y, so its last Friday of September is included; Class 2027
+ends September 30, 2027. The report sent to people is the October-September report
+class; see "Class window, rollover and weekly cross-checks" below.
 
 Configuration parses `human_modes` with the cohort fields. Class 2027 uses `[0,2]`;
 class 2026 retains `[0,1,2]` while eligible. `delivery_enabled: false` stages previews.
@@ -38,6 +40,12 @@ bundle's artifacts. The process returns nonzero if any selected bundle fails.
 | core/pipeline.py | Stage/build/validate each report, prepare presentation, construct routes and deliver |
 | core/report_artifacts.py | Explicit options, atomic copies/JSON and hash verification |
 | core/delivery.py | MIME attachments, saved previews, SMTP and per-route delivery journal |
+| core/academic_year.py | Class window (last week of June Y-1 to September 30 Y), October report-class switch, graduation terms |
+| core/cohort_manager.py | Configured classes plus automatic derivation of the next class from the latest configured one |
+| core/history_window.py | Prunes Weekly History tables and ZOHO_DATA to the class window; one column per date |
+| core/rollover.py | Creates a new class's workbook from the previous class's (years moved forward, history cleared) |
+| core/report_checks.py | Weekly cross-checks of each saved workbook against its SQL counts and its own arithmetic |
+| core/friday_visualization.py | Friday step: visualization_test dashboards/decks from this run's checked snapshots |
 | LeadershipReport/update_overall_report.py | Existing SQL/table updates with explicit date/path and connection cleanup |
 | ProgramReports/create_program_reports.py | Existing program aggregate updates with explicit date/path |
 | ProgramReports/placement_details.py | Detail write into that same staged report; corrected Finance second-year source |
@@ -82,13 +90,56 @@ duplicates fail. Empty `Column1` placeholders are ignored. Other malformed heade
 are listed in metadata; the supplied MISM history includes `10/31/20252`, which is
 not guessed. The requested current date must exist in every selected source table.
 
-The existing cohort/population filters, Finance internship years, Healthcare
+The full-time population is class_of Y enrolled or graduated plus class_of Y-1/Y-2 still
+enrolled, adjusted by graduation term (actual, else expected): graduating August Y-1..June Y
+is added, after June Y is left for a later class, and graduates from before August Y-1 are
+left out (core/academic_year.full_time_population_sql). Internship populations, Finance
+internship years, Healthcare
 queries and append-only Zoho helper behavior are unchanged. Visualization reads
 fresh report tables, not `ZOHO_DATA`. The summary sheet's existing total formulas
 remain formulas in the attached XLSX and recalculate when opened in Excel; the
 PDF uses validated stored history values and does not depend on those formula
 caches. SQL detail queries still use NOW() - INTERVAL 7 DAY: backdating a live build
 is therefore rejected. Mocked database tests do not establish live SQL correctness.
+
+## Class window, rollover and weekly cross-checks
+
+The Class of Y is students expected to graduate August Y-1 through June Y. Its Weekly
+History tables hold one column per report date from the last week of June Y-1 through
+the last Friday of September Y. Before each weekly column is appended, both builders
+remove columns dated outside that window, collapse same-day duplicates (keeping the
+last written, renamed to the plain date) and drop empty ColumnN placeholders; ZOHO_DATA
+rows outside the window or copied from duplicate columns are removed too. Non-empty
+columns with unreadable headers are kept and reported. Class Size and % Placed are
+recomputed for every column of every Weekly History table.
+
+From the last week of June Y-1 two classes are collected. Until September 30 the
+report sent to people is still the Class of Y-1; the Class of Y is built, checked and
+archived to Box/Zoho only. From October 1 the Class of Y is the report class and the
+Class of Y-1 stops. A class missing from cohorts.yml is derived from the latest listed
+class (Box folders and human_modes unchanged; internship years, semester filters and
+workbook paths moved forward). If its workbook does not exist, the first run creates it
+from the previous class's workbook: years in sheet names and titles move forward
+("2027 MSB Overall" -> "2028 MSB Overall"), counts and history are cleared and placement
+details are rewritten by that run. A dry run creates it only in the staged snapshot.
+
+Every bundle's saved snapshot is cross-checked before promotion or delivery
+(core/report_checks.py, results in checks.json). Errors fail the bundle: this week's
+column or Most Recent Friday table differs from the SQL counts fetched for it, a SQL
+status has no row in the table, a history column is outside the window, duplicated or
+out of order, the newest column is not the report date, any column's Class Size or
+% Placed does not reconcile, or the leadership Summary disagrees with a program table.
+Warnings are recorded without blocking: missed Fridays, non-Friday columns, class-size
+moves over 5% in a week, falling accepted counts, Summary total vs class size, and
+students the class_of rule keeps whose graduation term is outside August Y-1..June Y
+(a separate read-only query; a term after June Y in the population is an error). Offline runs check arithmetic and dates only.
+
+On Fridays the runner then calls visualization_test for the report class with that
+run's checked snapshots (core/friday_visualization.py). Each dashboard is checked
+against its source workbook before any screenshot; failures stop that audience's deck
+and email. Director workbooks are compared with the same-morning leadership report and
+differences are listed as warnings. Its delivery remains test-only (test_recipients and
+Box); directors are never emailed by it.
 
 ## Dashboard preparation
 
@@ -114,8 +165,8 @@ The current month updates on each run and is labeled with the report date. An
 available actual month-end observation finalizes a previously provisional month.
 Otherwise the last recorded date remains explicit in JSON metadata. On initial
 creation, available past months are seeded from the report history. Future and
-unavailable months remain blank. The last eligible Friday in September 2027 is
-September 17; this configuration cannot promise a September 30 observation.
+unavailable months remain blank. The class is tracked through September 30, so the
+last Friday of September (September 24, 2027) is observed.
 
 `historical_reports` can supply archived prior-cohort reports. Available monthly
 observations refresh the corresponding previous-year column with recorded source
