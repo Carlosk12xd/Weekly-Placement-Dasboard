@@ -1,3 +1,5 @@
+from core.academic_year import full_time_population_sql
+
 # Below Queries are all for the create_program_report file
 def sql_total_full(c_year, p_year1, p_year2, semester_byu):
     sem_byu = sql_list(semester_byu)
@@ -6,7 +8,7 @@ SELECT
     COALESCE(job_search_status, 'Not Reported') AS job_search_status,
     COUNT(*) AS count
 FROM msmdatabase.bcc_student_view
-WHERE ((class_of = {c_year} and enroll_status IN ("Enrolled", "Graduated")) or (class_of IN ({p_year1}, {p_year2}) and enroll_status = "Enrolled"))
+WHERE {full_time_population_sql(c_year)}
   AND program NOT IN ('EMBA','EMPA','StratMnr')
   AND enroll_status IN ('Enrolled','Graduated')
   AND record_status = 'A'
@@ -41,7 +43,7 @@ SELECT
     COALESCE(job_search_status, 'Not Reported') AS job_search_status,
     COUNT(*) AS count
 FROM msmdatabase.bcc_student_view
-WHERE ((class_of = {c_year} and enroll_status IN ("Enrolled", "Graduated")) or (class_of IN ({p_year1}, {p_year2}) and enroll_status = "Enrolled"))
+WHERE {full_time_population_sql(c_year)}
   AND program NOT IN ('EMBA','EMPA','StratMnr')
   AND program = {program}
   AND enroll_status IN ('Enrolled','Graduated')
@@ -164,7 +166,7 @@ WHERE b.created_date >= NOW() - INTERVAL 7 DAY
 	AND a.record_status = 'A'
     AND b.is_accepted = '1'
 	AND enroll_status IN ('Enrolled','Graduated')
-    AND ((class_of = {c_year} and enroll_status IN ("Enrolled", "Graduated")) or (class_of IN ({p_year1}, {p_year2}) and enroll_status = "Enrolled"))
+    AND {full_time_population_sql(c_year, 'a.')}
 ORDER BY a.last_name;
 """
 
@@ -190,7 +192,7 @@ WHERE b.created_date >= NOW() - INTERVAL 7 DAY
 	AND a.record_status = 'A'
     AND b.is_accepted = '1'
 	AND enroll_status IN ('Enrolled','Graduated')
-    AND ((class_of = {c_year} and enroll_status IN ("Enrolled", "Graduated")) or (class_of IN ({p_year1}, {p_year2}) and enroll_status = "Enrolled"))
+    AND {full_time_population_sql(c_year, 'a.')}
 ORDER BY a.last_name;
 """
 

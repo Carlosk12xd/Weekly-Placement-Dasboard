@@ -46,6 +46,11 @@ class OperationsTests(TestCase):
         self.finance = FIXTURES / 'ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSFin.xlsx'
         AcceptingSMTP.sent = []
         AcceptingSMTP.passwords = []
+        # Fixtures end 08/21/2026, before 2027 becomes the report class in October. These tests
+        # cover routing and journaling, so 2027 is treated as the report class here.
+        current = patch.object(pipeline, 'report_class_year', return_value=2027)
+        current.start()
+        self.addCleanup(current.stop)
 
     def tearDown(self):
         self.temp.cleanup()
@@ -97,7 +102,6 @@ class OperationsTests(TestCase):
     def test_unsafe_yaml_types_and_duplicate_cohorts_are_rejected(self):
         baseline = yaml.safe_load(self.config_path.read_text())
         mutations = [lambda c: c.update(delivery_enabled='false'),
-            lambda c: c.update(tracking_grace_period_days=-1),
             lambda c: c['cohorts'][0].update(enabled='false'),
             lambda c: c['cohorts'][0].update(human_modes=[True]),
             lambda c: c['cohorts'].append(dict(c['cohorts'][0])),

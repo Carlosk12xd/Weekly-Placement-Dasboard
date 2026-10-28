@@ -37,6 +37,25 @@ is the original design baseline, not the current implementation status.
   route whose SMTP outcome is uncertain. SMTP acceptance is not proof of receipt.
 - Keep one daily cron entry; month-end generation needs non-Friday runs. Human
   modes for 2027 are 0 and 2. Internal dashboard monthly updates also run in mode 1.
+- Class Y = expected graduation August Y-1..June Y. Its Weekly History runs from the
+  last week of June Y-1 to the last Friday of September Y (tracking ends September 30;
+  core/academic_year.py). Columns outside that window and same-day duplicates are
+  pruned; every column's Class Size and % Placed are recomputed. People receive only
+  the report class (October 1 switch); the overlapping next class is archive-only.
+  Missing classes are derived from the latest configured one; a missing class
+  workbook is created from the previous class's (core/rollover.py).
+- Every snapshot passes core/report_checks.py before promotion or delivery (SQL vs
+  workbook, arithmetic in all columns, window/dates, MRF vs history, Summary vs
+  program tables). Errors fail the bundle; warnings are recorded. The population-by-
+  graduation-term query flags anyone the class_of rule keeps outside the window.
+- Full-time Class Y (core/academic_year.full_time_population_sql, every full-time query):
+  class_of Y enrolled or graduated, plus class_of Y-1/Y-2 still enrolled; then the
+  graduation term (actual, else expected; text like 'Fall 2026') decides: August Y-1..June Y
+  is added, after June Y goes to a later class, already graduated before August Y-1 belongs to
+  an earlier class. Approved by the user 2026-10-28.
+- Friday runs call visualization_test (core/friday_visualization.py) with the run's
+  checked snapshots; each dashboard is checked against its source before screenshots.
+  It never emails directors.
 - After edits, update IMPLEMENTATION_STATUS.md, validation evidence and release
   hashes. Distinguish offline-tested, mocked, target-Pi-tested, and deployed work.
 - Operational entry points: `python -m core.doctor` inspects prerequisites only;

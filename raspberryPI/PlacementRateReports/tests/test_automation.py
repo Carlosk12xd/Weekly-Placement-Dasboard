@@ -151,8 +151,11 @@ class FlowTests(TestCase):
         self.assertEqual(report_mode(date(2027, 4, 30)), 2)
         self.assertIsNone(report_mode(date(2026, 9, 24)))
         manager = CohortManager([self.cohort])
-        self.assertEqual(manager.get_active_cohorts(date(2027, 9, 19)), [self.cohort])
-        self.assertEqual(manager.get_active_cohorts(date(2027, 9, 20)), [])
+        # Tracked through September 30 (its last Friday is 09/24/2027); the Class of 2028
+        # is derived from it and starts the last week of June 2027.
+        self.assertEqual(manager.get_active_cohorts(date(2027, 6, 18)), [self.cohort])
+        self.assertEqual([c.id for c in manager.get_active_cohorts(date(2027, 9, 30))], ['2027', '2028'])
+        self.assertEqual([c.id for c in manager.get_active_cohorts(date(2027, 10, 1))], ['2028'])
         self.assertEqual(self.cohort.human_modes, [0, 2])
 
     def test_finance_details_use_both_internship_years(self):
@@ -234,6 +237,11 @@ class FlowTests(TestCase):
         from core import pipeline
         source = REPORTS / 'ProgramReports/2027_Placement_Reports/2027-WeeklyPlacement-BSFin.xlsx'
         options = RunOptions(offline=True, run_root=self.folder)
+        # Fixtures end 08/21/2026, before 2027 becomes the report class in October; this test
+        # covers PDF holds, so treat 2027 as the report class (the calendar is tested elsewhere).
+        current = patch.object(pipeline, 'report_class_year', return_value=2027)
+        current.start()
+        self.addCleanup(current.stop)
         with patch.object(pipeline, 'render_pdf', side_effect=RuntimeError('fixture conversion failure')), \
              patch('smtplib.SMTP', side_effect=AssertionError('SMTP must not be called')):
             result = execute_bundle(self.cohort, 0, date(2026, 8, 21), 'Tanya', source,
