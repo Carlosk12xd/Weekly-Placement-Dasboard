@@ -27,9 +27,6 @@ def load_cohorts(path=ROOT / 'config/cohorts.yml'):
         raise ValueError('Configuration must contain a cohorts list')
     if type(config.get('delivery_enabled', False)) is not bool:
         raise ValueError('delivery_enabled must be a YAML boolean, not quoted text')
-    grace = config.get('tracking_grace_period_days', 90)
-    if type(grace) is not int or grace < 0:
-        raise ValueError('tracking_grace_period_days must be a nonnegative integer')
     cohorts = []
     seen = set()
     for entry in config['cohorts']:
@@ -109,8 +106,9 @@ def main(argv=None):
         locked = True
         record.save()
         config, cohorts = load_cohorts(args.config)
-        if args.cohort and set(args.cohort) - {c.id for c in cohorts}:
-            raise ValueError('Requested cohort is not configured')
+        manager = CohortManager(cohorts)
+        if args.cohort and any(manager.cohort(c) is None for c in args.cohort):
+            raise ValueError('Requested cohort is not configured and cannot be derived from an earlier one')
         selected_reports([], args.source_root, args.audience or ())  # Validate selection even on skipped days.
         if args.test_recipient:
             from .delivery import validate_recipients
@@ -127,7 +125,7 @@ def main(argv=None):
             record.finish('skipped', reason='Not a Friday or month end')
             logger.info('Not a Friday or month end; no action.')
             return 0
-        active = CohortManager(cohorts, config.get('tracking_grace_period_days', 90)).get_active_cohorts(args.date)
+        active = manager.get_active_cohorts(args.date)
         active = [c for c in active if not args.cohort or c.id in args.cohort]
         if not active:
             record.finish('skipped', reason='No selected active cohorts for this date')
@@ -148,6 +146,15 @@ def main(argv=None):
             logger.info('%s/%s: %s', target['cohort'].id, result['audience'], result['status'])
         failed = any(r['status'] == 'failed' for r in record.value['results'])
         record.value.pop('current_bundle', None)
+        if flag in (0, 2) and not args.dashboard_only:
+            # Friday: dashboards and slide decks from this run's checked workbooks.
+            from .friday_visualization import run as friday_visualizations
+            record.value['stage'] = 'visualizations'
+            record.save()
+            visuals = friday_visualizations(args.date, cohorts, record.value['results'], options)
+            record.value['visualizations'] = visuals
+            logger.info('Friday visualizations: %s', visuals['status'])
+            failed = failed or visuals['status'] == 'failed'
         record.finish('failed' if failed else 'completed', stage='finished')
         return int(failed)
     except KeyboardInterrupt:

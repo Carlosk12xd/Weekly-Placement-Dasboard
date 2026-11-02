@@ -1,4 +1,26 @@
-# Implementation status - September 24, 2026
+# Implementation status - October 21, 2026
+
+## October 21, 2026 additions (offline-tested with mocked SQL; not on the Pi)
+
+- Class window and October report class (core/academic_year.py): Weekly History is
+  pruned to the last week of June Y-1 .. last Friday of September Y; tracking ends
+  September 30 instead of graduation + 90 days; people receive only the report class.
+- Automatic next class: missing cohorts derived from the latest configured one; a
+  missing class workbook is created from the previous class's (years moved forward).
+- Weekly cross-checks of every saved workbook (core/report_checks.py) and of every
+  visualization_test dashboard (visualization_test/checks.py); errors block delivery.
+- visualization_test wired into the Friday runner (core/friday_visualization.py).
+- Evidence: 42 production tests (3 need Linux: lock and platform checks, run here with
+  a Windows lock shim and sys.platform faked) and 11 visualization tests pass; an
+  offline end-to-end runner run for 2026-10-09 built checked leadership/Tanya/Bob decks.
+  Not verified: live SQL, Pi runtime, real SMTP from the runner.
+- October 28: the full-time population uses the graduation-term rule in
+  core/academic_year.full_time_population_sql (see AGENTS.md). Tested by running the
+  generated condition in SQLite against sample students; `exp_grad_semester` and
+  `act_grad_semester` exist in the live view (2026 Healthcare report) as text such as
+  'Fall 2026', but the new condition has not run against the live database.
+
+# Implementation status - September 24, 2026 (baseline)
 
 **Implemented and verified offline; not yet installed or exercised on the Raspberry Pi.**
 No real database query, SMTP email, Box upload, Zoho write or cron change occurred.

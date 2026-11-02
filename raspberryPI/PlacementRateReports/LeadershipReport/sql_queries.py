@@ -1,3 +1,5 @@
+from core.academic_year import full_time_population_sql, graduation_term_sql
+
 # Creates the summary sheet: compares each program to each other
 def summary_template(programs, c_year, p_year1, p_year2, semester_byu):
     programs_sql = sql_list(programs)
@@ -12,7 +14,7 @@ SELECT
     SUM(CASE WHEN is_international = 1 AND (work_authorization NOT IN ('U.S. Permanent Resident', 'U.S. Citizen') OR work_authorization IS NULL) THEN 1 ELSE 0 END) AS intl_all,
     COUNT(*) AS total
 FROM msmdatabase.bcc_student_view
-WHERE ((class_of = {c_year} and enroll_status IN ('Enrolled', 'Graduated')) or (class_of IN ({p_year1}, {p_year2}) and enroll_status = 'Enrolled'))
+WHERE {full_time_population_sql(c_year)}
   AND program NOT IN ('EMBA','EMPA','StratMnr')
   AND program IN {programs_sql}
   AND enroll_status IN ('Enrolled','Graduated')
@@ -30,13 +32,35 @@ SELECT
     COALESCE(job_search_status, 'Not Reported') AS job_search_status,
     COUNT(*) AS count
 FROM msmdatabase.bcc_student_view
-WHERE ((class_of = {c_year} and enroll_status IN ('Enrolled', 'Graduated')) or (class_of IN ({p_year1}, {p_year2}) and enroll_status = 'Enrolled'))
+WHERE {full_time_population_sql(c_year)}
   AND program NOT IN ('EMBA','EMPA','StratMnr')
   AND enroll_status IN ('Enrolled','Graduated')
   AND record_status = 'A'
   AND semester_byu NOT IN {semester_sql}
 GROUP BY COALESCE(job_search_status, 'Not Reported')
 ORDER BY job_search_status;
+"""
+
+# Cross-check only (not written to the workbook): the full-time population above, counted by
+# class and graduation term (actual, else expected), so students the class_of rule keeps from
+# before August Y-1, or with no term, can be reported.
+def population_by_grad_term(c_year, p_year1, p_year2, semester_byu):
+    semester_sql = sql_list(semester_byu)
+    term = graduation_term_sql()
+    return f"""
+SELECT
+    class_of,
+    {term} AS grad_term,
+    enroll_status,
+    COUNT(*) AS count
+FROM msmdatabase.bcc_student_view
+WHERE {full_time_population_sql(c_year)}
+  AND program NOT IN ('EMBA','EMPA','StratMnr')
+  AND enroll_status IN ('Enrolled','Graduated')
+  AND record_status = 'A'
+  AND semester_byu NOT IN {semester_sql}
+GROUP BY class_of, {term}, enroll_status
+ORDER BY class_of, grad_term;
 """
 
 # Creates the fourth sheet that has internship MSB class totals split up by job_search_status
@@ -69,7 +93,7 @@ SELECT
     COALESCE(job_search_status, 'Not Reported') AS job_search_status,
     COUNT(*) AS count
 FROM msmdatabase.bcc_student_view
-WHERE ((class_of = {c_year} and enroll_status IN ('Enrolled', 'Graduated')) or (class_of IN ({p_year1}, {p_year2}) and enroll_status = 'Enrolled'))
+WHERE {full_time_population_sql(c_year)}
   AND program NOT IN ('EMBA','EMPA','StratMnr')
   AND program = {prog_literal}
   AND enroll_status IN ('Enrolled','Graduated')

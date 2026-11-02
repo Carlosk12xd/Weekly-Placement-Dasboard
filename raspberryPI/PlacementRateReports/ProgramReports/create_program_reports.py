@@ -13,6 +13,8 @@ from datetime import date
 import re
 
 from ProgramReports.cd_sql_queries import write_sql_bsfin_queries, write_sql_overall_queries, write_sql_program_queries
+from core.academic_year import in_window
+from core.history_window import prune_history
 
 # =========================
 # ENV + CONSTANTS
@@ -327,8 +329,9 @@ def update_wh_table(ws: Worksheet, tbl_name: str, sql_rows):
     total_row = relabel_total_row_to_class_size(ws, label_col, min_row, max_row)
     ws.cell(row=total_row - 1, column=newest_col).border = THIN_BORDER
 
-    # totals + % placed for newest column
-    compute_totals_and_percent(ws, min_row, max_row, min_col, newest_col)
+    # totals + % placed for every column, so earlier weeks stay consistent with their counts
+    for col in range(min_col + 1, newest_col + 1):
+        compute_totals_and_percent(ws, min_row, max_row, min_col, col)
 
 def compute_totals_and_percent(ws: Worksheet, min_row: int, max_row: int, min_col: int, col: int):
     """
@@ -404,9 +407,13 @@ def update_bsfin_with_ft_int(ws: Worksheet, table_tuple, ft_rows, int_2027_rows,
 # MAIN
 # =========================
 
-def main(programs, cohort, output_path=None, report_date=None):
+def main(programs, cohort, output_path=None, report_date=None, capture=None):
+    """capture: optional dict that receives the SQL counts written to each table and the
+    columns removed by the window prune, for core.report_checks."""
     global RUN_DATE_LABEL
     RUN_DATE_LABEL = (report_date or date.today()).strftime("%m/%d/%Y")
+    if not in_window(cohort.id, report_date or date.today()):
+        raise RuntimeError(f"{report_date or date.today()} is outside the Class of {cohort.id} weekly history window")
     # DB
     conn = connect_database(BASE_DIR)
     cur = conn.cursor()
@@ -468,6 +475,30 @@ def main(programs, cohort, output_path=None, report_date=None):
 
     # tables
     tbls = table_names(programs)
+
+    # Keep only this class's window (last week of June -> last week of September) in every
+    # Weekly History table (the even-numbered tables), before the new column is appended.
+    pruned = {}
+    for sheet, names in [(f"{c_year} MSB Overall", tbls["Class"])] + [(p, tbls[p]) for p in programs]:
+        if sheet not in wb.sheetnames:
+            continue
+        for name in names[1::2]:
+            removed = prune_history(wb[sheet], get_table(wb[sheet], name), c_year)
+            if removed:
+                pruned[name] = removed
+    if capture is not None:
+        written = dict.fromkeys(tbls["Class"][:2], total_ft_rows)
+        written.update(dict.fromkeys(tbls["Class"][2:], total_int_rows))
+        for program in programs:
+            names = tbls[program]
+            written.update(dict.fromkeys(names[:2], byprog_ft[program]))
+            if program == "BSFin":
+                written.update(dict.fromkeys(names[2:4], byprog_bsfin_int[nxt_yr1]))
+                written.update(dict.fromkeys(names[4:6], byprog_bsfin_int[nxt_yr2]))
+            else:
+                written.update(dict.fromkeys(names[2:], byprog_int[program]))
+        capture.update(sql={name: {str(s).strip(): int(n) for s, n in rows} for name, rows in written.items()},
+                       pruned=pruned)
 
     # totals sheet (exact name confirmed earlier)
     class_ws_name = f"{c_year} MSB Overall"

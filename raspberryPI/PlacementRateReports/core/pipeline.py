@@ -6,6 +6,10 @@ import json
 import logging
 from .report_artifacts import ROOT, atomic_copy, sha256, write_json, verify_file
 from .delivery import env_list, message, save_route, deliver
+from .academic_year import report_class_year
+from .history_window import prune_workbook
+from .report_checks import check_report
+from .rollover import class_report_path, create_class_workbook
 from Visualization.build_visualization import build_visualization, load_profile
 from Visualization.render_excel import render_pdf
 from Visualization.update_dashboard import read_history, PAGES, OVERALL
@@ -85,24 +89,50 @@ def prepare_and_deliver(cohort, mode, report_date, audience, rolling, programs, 
     else:
         if options.retry:
             raise RuntimeError('No completed report snapshot; retry must not requery SQL')
-        source_hash = sha256(rolling)
-        atomic_copy(rolling, snapshot)
-        verify_file(snapshot, source_hash)
+        if rolling.exists():
+            source_hash = sha256(rolling)
+            atomic_copy(rolling, snapshot)
+            verify_file(snapshot, source_hash)
+        else:
+            # First report of a new class: start from the previous class's workbook with
+            # the years moved forward and every history column cleared.
+            previous = class_report_path(rolling, cohort.id, int(cohort.id) - 1)
+            if not previous.is_file():
+                raise FileNotFoundError(f'{rolling.name} does not exist and there is no {previous.name} to create it from')
+            create_class_workbook(previous, snapshot, old_year=int(cohort.id) - 1, new_year=cohort.id)
+            source_hash = None
+            manifest['created_from'] = {'file': previous.name, 'sha256': sha256(previous)}
+        capture = {}
         if not options.offline:
             if leadership:
                 from LeadershipReport.update_overall_report import main
-                main(cohort.id, cohort.semester_byu, cohort.internship_years, str(snapshot), report_date=report_date)
+                main(cohort.id, cohort.semester_byu, cohort.internship_years, str(snapshot),
+                     report_date=report_date, capture=capture)
             else:
                 if not healthcare:
                     from ProgramReports.create_program_reports import main
-                    main(programs, cohort, output_path=snapshot, report_date=report_date)
+                    main(programs, cohort, output_path=snapshot, report_date=report_date, capture=capture)
                 from ProgramReports.placement_details import main
                 main(programs, cohort, output_path=snapshot, report_date=report_date)
         if not healthcare:
+            # The builders already keep their tables to the class window; this also covers
+            # offline runs, which do not rebuild, and is a no-op on a freshly built workbook.
+            pruned = prune_workbook(snapshot, cohort.id)
+            capture['pruned'] = {**capture.get('pruned', {}), **pruned}
             warnings = []
             read_history(snapshot, PAGES if leadership else (OVERALL,) + tuple(programs),
                          report_date, cohort.start_date, warnings)
             manifest['source_warnings'] = warnings
+            # Cross-check the saved workbook against this week's SQL counts and its own arithmetic.
+            checks = check_report(snapshot, class_year=cohort.id, report_date=report_date,
+                                  sql=capture.get('sql'), pruned=capture.get('pruned'),
+                                  population=capture.get('population'),
+                                  population_error=capture.get('population_error'))
+            write_json(directory / 'checks.json', checks)
+            manifest['checks'] = {'errors': len(checks['errors']), 'warnings': checks['warnings']}
+            if checks['errors']:
+                write_json(directory / 'manifest.json', manifest)
+                raise RuntimeError(f"Report cross-check failed ({len(checks['errors'])}): {checks['errors'][0]}")
         else:
             from openpyxl import load_workbook
             wb = load_workbook(snapshot, read_only=True)
@@ -116,11 +146,11 @@ def prepare_and_deliver(cohort, mode, report_date, audience, rolling, programs, 
         write_json(directory / 'manifest.json', manifest)
     # Promote valid data independently of PDF success; never overwrite newer history.
     if not options.dry_run and not options.test_recipient and not manifest.get('history_promoted'):
-        current = sha256(rolling)
+        current = sha256(rolling) if rolling.exists() else None
         if current not in (manifest['source_rolling_sha256'], artifacts['xlsx']['sha256']):
             raise RuntimeError('Rolling workbook changed since staging; refusing to overwrite newer history')
         backup = rolling.with_name(rolling.stem + f'.before-{report_date}.xlsx')
-        if not backup.exists() and current == manifest['source_rolling_sha256']:
+        if current is not None and not backup.exists() and current == manifest['source_rolling_sha256']:
             atomic_copy(rolling, backup)
         atomic_copy(snapshot, rolling)
         manifest['history_promoted'] = True
@@ -204,7 +234,10 @@ def prepare_routes(cohort, mode, report_date, audience, programs, recipients, op
         zoho = env_list('Zoho_Box', settings)
         save('zoho', message(f'Auto upload: {snapshot.stem} {report_date}', 'Automated workbook import.',
              [snapshot], zoho, message_key=key + '/zoho'), zoho)
-    human_allowed = mode in cohort.human_modes
+    # People receive only the current report class (October-September); the next class,
+    # collected from the last week of June, is archived to Box/Zoho until October.
+    current_class = str(cohort.id) == str(report_class_year(report_date))
+    human_allowed = mode in cohort.human_modes and current_class
     manifest['human_policy_enabled'] = human_allowed
     manifest['pdf_required'] = needs_pdf
     if human_allowed and (not needs_pdf or pdf is not None):
@@ -224,6 +257,8 @@ def prepare_routes(cohort, mode, report_date, audience, programs, recipients, op
         manifest.pop('human_held', None)
     elif human_allowed:
         manifest['human_held'] = 'Dashboard-only preview' if options.dashboard_only else 'Required PDF unavailable'
+    elif not current_class:
+        manifest['human_held'] = f'Class of {cohort.id} is archived only until October {int(cohort.id) - 1}'
     else:
         manifest['human_held'] = 'Disabled for this report mode'
     write_json(directory / 'manifest.json', manifest)

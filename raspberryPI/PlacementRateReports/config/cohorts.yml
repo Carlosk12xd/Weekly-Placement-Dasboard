@@ -21,7 +21,14 @@ delivery_enabled: false
 #     weekly_box_programs: "Program.ccc13xxgj7i3my0f@u.box.com"
 #     monthly_box_leadership: "Monthly.7snc5hlyjlvs5zn8@u.box.com"
 #     monthly_box_programs: "Program.z7oooee224ngl6hn@u.box.com"
-#     enabled: true. Always have it enabled unless the cutoff 90 day grace period has already ended. Then it is lkay to disable them or even delete them if wanted
+#     enabled: true. Leave it enabled; a class stops being tracked on September 30 of its graduation year.
+#
+# Tracking window (core/academic_year.py): the Class of Y is tracked from the last week of
+# June Y-1 through September 30 of Y, so its weekly history runs from the last Friday of June
+# to the last Friday of September. From October 1 the report sent to people is the next class.
+# A class that is not listed here is derived automatically from the latest listed class
+# (same Box folders and human_modes; every year moved forward), and its workbooks are created
+# from the previous class's workbooks on its first run. Add an entry only to override that.
 
 
 cohorts:
@@ -69,5 +76,3 @@ cohorts:
     monthly_box_programs: "Career_.41ofhvei7rdketxz@u.box.com"
     enabled: true
 
-
-tracking_grace_period_days: 90    # 3 months ~ 90 days

@@ -53,10 +53,11 @@ def inspect_setup(*, config_path=ROOT / 'config/cohorts.yml', source_root=ROOT,
               'checks': checks, 'network_checked': False, 'writes_performed': False}
     try:
         config, cohorts = load_cohorts(config_path)
-        if set(cohort_ids) - {c.id for c in cohorts}:
-            raise ValueError('Requested cohort is not configured')
-        active = CohortManager(cohorts, config.get('tracking_grace_period_days', 90)).get_active_cohorts(report_date)
-        selected = [c for c in cohorts if c.id in cohort_ids] if cohort_ids else active
+        manager = CohortManager(cohorts)
+        if any(manager.cohort(c) is None for c in cohort_ids):
+            raise ValueError('Requested cohort is not configured and cannot be derived from an earlier one')
+        active = manager.get_active_cohorts(report_date)
+        selected = [manager.cohort(c) for c in cohort_ids] if cohort_ids else active
         targets = selected_reports(selected, source_root, audiences)
         add('configuration', True, f'{len(selected)} selected cohorts; {len(targets)} report bundles')
         add('cohort_selection', bool(selected), 'Select an eligible cohort or pass --cohort to inspect an inactive one')
@@ -70,6 +71,13 @@ def inspect_setup(*, config_path=ROOT / 'config/cohorts.yml', source_root=ROOT,
 
     for target in targets:
         label = f"input:{target['cohort'].id}/{target['audience']}"
+        if not Path(target['rolling']).exists():
+            # A new class's first run creates its workbook from the previous class's.
+            from .rollover import class_report_path
+            previous = class_report_path(target['rolling'], target['cohort'].id, int(target['cohort'].id) - 1)
+            if previous.is_file():
+                add(label, True, f'Created from {previous.name} on the first run of this class')
+                continue
         try:
             with ZipFile(target['rolling']) as archive:
                 valid = archive.testzip() is None and 'xl/workbook.xml' in archive.namelist()

@@ -1,0 +1,34 @@
+# Visualization test pipeline. Reads the report workbooks the production pipeline
+# already wrote; never queries SQL and never writes production files.
+
+# Dashboard template for this pipeline only (relative to PlacementRateReports); the
+# production template in Visualization/templates stays unchanged. Edit formatting freely;
+# keep the comparison table at M22:S38 with years in row 24.
+template: visualization_test/assets/placement_dashboard_template.xlsx
+
+# Run after the report bundles in the Friday runner (core.daily_runner), from that run's
+# checked workbooks. On a dry run it only writes previews; on a sending run it emails the
+# test_recipients below (and Box), never directors.
+friday_runner: true
+
+# Test inboxes. --send delivers ONLY here; director addresses are never used.
+# Empty list = previews (.eml files) only.
+test_recipients: ["zslincogg@gmail.com"]
+
+# Box "email upload" address of each class year's folder:
+#   Reports > Placement Reports > <year> Placement Reports > Placement Visualizations
+# (folder > ... > Settings > Email Options). With --send, every audience's workbook
+# and deck are uploaded to the current class year's folder. Add each new year here.
+box_upload_addresses:
+  "2027": []
+
+# Names in the email greeting, joined alphabetically ("Amy & Tanya").
+# Director keys not listed are greeted by the key itself.
+email_directors:
+  Tanya: ["Tanya", "Amy"]
+  Bob: ["Bob", "Audrey"]
+  leadership: ["Leadership Team"]
+
+dpi: 190
+timeout: 300
+print_area: B1:T39

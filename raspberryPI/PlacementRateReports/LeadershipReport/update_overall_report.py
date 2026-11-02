@@ -17,7 +17,9 @@ from openpyxl.utils import get_column_letter, column_index_from_string
 from openpyxl.styles import Alignment, Border, Side
 from pathlib import Path
 
-from LeadershipReport.sql_queries import write_overall_queries, write_byProg_queries
+from LeadershipReport.sql_queries import write_overall_queries, write_byProg_queries, population_by_grad_term
+from core.academic_year import in_window
+from core.history_window import prune_history, prune_zoho_rows
 
 # ----------------------------
 # 1) Global Variables
@@ -322,7 +324,13 @@ def update_wh_table(
     # duplicate. Appending duplicate date columns is what corrupts the Excel tables
     # (duplicate header cells vs. unique tableColumn names -> Excel validation fails).
     rightmost_header = ws.cell(row=header_row, column=max_col).value
-    if str(rightmost_header).strip() == RUN_DATE_LABEL:
+    if not existing_data_cols:
+        # Empty after the window prune (first week of a new class): start at the first data column.
+        ws.cell(row=header_row, column=min_col + 1, value=RUN_DATE_LABEL)
+        new_data_cols = [min_col + 1]
+        newest_col = min_col + 1
+        set_table_ref(ws, tbl, min_row, max_row, min_col, newest_col)
+    elif str(rightmost_header).strip() == RUN_DATE_LABEL:
         new_data_cols = existing_data_cols
         newest_col = max_col
         # Table ref already includes this column; no expansion needed.
@@ -761,11 +769,24 @@ def _unused_update_summary_sheet(ws: Worksheet, rows: List[Tuple]):
 # 5) Main workflow: connect to DB -> run SQL queries -> open Excel workbook -> update each of the sheets -> save and create a copy for history
 # ----------------------------
 
-def main(year, byu_semester, int_years, OUTPATH1, report_date=None):
+def history_tables():
+    """(sheet, Weekly History table) pairs in this workbook."""
+    yield SHEET_TOTAL_FT, TABLE_TOTAL_FT_WH
+    yield SHEET_TOTAL_INT, TABLE_TOTAL_INT_WH
+    for prog in PROGRAMS:
+        yield SHEET_BYPROG_FT, byprog_full_names(prog)[1]
+        yield SHEET_BYPROG_INT, byprog_int_names(prog)[1]
+
+
+def main(year, byu_semester, int_years, OUTPATH1, report_date=None, capture=None):
+    """capture: optional dict that receives the SQL counts written to each table, the
+    columns removed by the window prune and the population cross-check, for report_checks."""
     global RUN_DATE, RUN_DATE_LABEL
     RUN_DATE = report_date or date.today()
     RUN_DATE_LABEL = RUN_DATE.strftime("%m/%d/%Y")
     template_path = OUTPATH1
+    if not in_window(year, RUN_DATE):
+        raise RuntimeError(f"{RUN_DATE} is outside the Class of {year} weekly history window")
 
     if not os.path.exists(template_path):
         raise FileNotFoundError(f"Template not found at: {template_path}")
@@ -808,12 +829,41 @@ def main(year, byu_semester, int_years, OUTPATH1, report_date=None):
             byprog_ft[prog] = fetch_rows(cur, full_sql)
             byprog_int[prog] = fetch_rows(cur, int_sql)
 
+        # Who is in the full-time population, by expected graduation term (cross-check only;
+        # a failure here never blocks the report).
+        population = None
+        if capture is not None:
+            try:
+                population = fetch_rows(cur, population_by_grad_term(current_yr, past_year1, past_year2, byu_semester))
+            except Exception as exc:
+                capture['population_error'] = f"{type(exc).__name__}: {exc}"
+
     finally:
         cur.close()
         conn.close()
 
     # Open workbook
     wb = load_workbook(template_path, data_only=False)
+
+    # Keep only this class's window (last week of June -> last week of September) in every
+    # Weekly History table, before the new column is appended.
+    pruned = {}
+    for sheet, table in history_tables():
+        removed = prune_history(wb[sheet], get_table(wb[sheet], table), year)
+        if removed:
+            pruned[table] = removed
+    if SHEET_ZOHO in wb.sheetnames:
+        pruned_zoho = prune_zoho_rows(wb[SHEET_ZOHO], year)
+        if pruned_zoho:
+            pruned[SHEET_ZOHO] = pruned_zoho
+    if capture is not None:
+        written = {TABLE_TOTAL_FT_MRF: total_ft_rows, TABLE_TOTAL_FT_WH: total_ft_rows,
+                   TABLE_TOTAL_INT_MRF: total_int_rows, TABLE_TOTAL_INT_WH: total_int_rows}
+        for prog in PROGRAMS:
+            written.update(dict.fromkeys(byprog_full_names(prog), byprog_ft[prog]))
+            written.update(dict.fromkeys(byprog_int_names(prog), byprog_int[prog]))
+        capture.update(sql={name: {str(s).strip(): int(n) for s, n in rows} for name, rows in written.items()},
+                       pruned=pruned, population=[list(r) for r in population] if population else None)
 
     # 1) Summary – Full Time
     # byprog_ft is passed in so 'Not Reported' can be split out from 'No Info', which the

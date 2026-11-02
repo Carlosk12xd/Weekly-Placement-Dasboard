@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+example-runs/
+raspberryPI/PlacementRateReports/runs/
+raspberryPI/PlacementRateReports/visualization_test_runs/
+.env

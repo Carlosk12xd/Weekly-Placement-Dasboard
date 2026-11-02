@@ -1,11 +1,11 @@
 {
-  "prepared": "2026-09-24",
+  "prepared": "2026-10-21",
   "original_archive_sha256": "4727bdef830dc627d3665767d93a4a59ee4ced5e1961af6cddb277b06e6826aa",
   "renderer_source_commit": "471bf7174d44a0ab08439128d4853096d0fbc693",
   "files": [
     {
       "path": "AGENTS.md",
-      "sha256": "c8f0f096f728f3bd6a48ead9c87af55d1b87b766dd2ee320762b1a264446e115",
+      "sha256": "74209a462de97fee97025b8547a78b3a38e800a0ce78e2df846aea8590d7a0c0",
       "original_sha256": null
     },
     {
@@ -19,13 +19,18 @@
       "original_sha256": null
     },
     {
+      "path": "CHANGES-2026-10-21.md",
+      "sha256": "38a2687c96393fd12e5268bccb31a7a57a97d4730a9480fd8718458afecf0e51",
+      "original_sha256": null
+    },
+    {
       "path": "DEPLOYMENT.md",
       "sha256": "493624e1372fed1427a81524b2d2726990e5535c6ca1482ee68f6b3255b75797",
       "original_sha256": null
     },
     {
       "path": "DOCUMENTATION.md",
-      "sha256": "446fd20b394fb6c591b2ee5731a6143d7ab85a3b086df92a43895f7f1fcb5ff4",
+      "sha256": "2017af8f60c8e8124f32bd8d7ea185610aa147fa5002b88d545011c26f6168ab",
       "original_sha256": "1c9b0c823a808dd3884327c6fc0557b6dc918c0ad3d7350346c9b521ce6593b5"
     },
     {
@@ -35,7 +40,7 @@
     },
     {
       "path": "IMPLEMENTATION_STATUS.md",
-      "sha256": "0106270251747269d2fbf97531b3b617d2d0e289aa944dadf0ef9d35d3cf4ec4",
+      "sha256": "674979b235411909b8b646c18152019b48d00e0eed2121d8df5cb60b255545d9",
       "original_sha256": null
     },
     {
@@ -50,12 +55,12 @@
     },
     {
       "path": "LeadershipReport/sql_queries.py",
-      "sha256": "0dc4ab20b12c35442bd9e3bfe2a3d52e9dfe48eefffac8a5658266182ec69272",
+      "sha256": "ac9db85429dc5f0013f6974c964f016227e2a9ab13592834b5c01f67cbf9c4ca",
       "original_sha256": "0dc4ab20b12c35442bd9e3bfe2a3d52e9dfe48eefffac8a5658266182ec69272"
     },
     {
       "path": "LeadershipReport/update_overall_report.py",
-      "sha256": "d3c7f09d340780b46cfe61309911579f7b95c6b894578ff4043ba0e4a960c817",
+      "sha256": "c0065637b4ae3a7178cd9847a2ce9d9b936b49e782913ba3deef39112e3e4757",
       "original_sha256": "1ee74c9849e8b9bf9fabda3fede4da744c38f39fbc7f9fa8cc7688a2049ef577"
     },
     {
@@ -65,12 +70,12 @@
     },
     {
       "path": "ProgramReports/cd_sql_queries.py",
-      "sha256": "f1853dfaddf94ad05a4dfa7e0c63dc2f6d730b3ea60b6b84aa8a9fd31ef3c2fa",
+      "sha256": "7fa425ce3a01787581f9f31d2a0cbc8102a775a9902dbaa1f0b1ed5d02d619e7",
       "original_sha256": "f1853dfaddf94ad05a4dfa7e0c63dc2f6d730b3ea60b6b84aa8a9fd31ef3c2fa"
     },
     {
       "path": "ProgramReports/create_program_reports.py",
-      "sha256": "b41073e1a8ca355f682ebdc41beb93fef82ca6dff01f52e2dca42c20c2d60671",
+      "sha256": "f2817cba9f97fbff9af4e919630a9698a281814963ede5b4c996e36dab72d6aa",
       "original_sha256": "39e5ede8dfeca4745106389158c604799ae6e26c05288c004e7b96d712214181"
     },
     {
@@ -160,7 +165,7 @@
     },
     {
       "path": "config/cohorts.yml",
-      "sha256": "23be747348e82d05c2aec017a170892db68b647d2455aafd9eb048d0f3e23a75",
+      "sha256": "d1516874cd6bd2d904c34f4d98070623758fa5347d3d77d1bc637783360f05a3",
       "original_sha256": "e79451b6809946983969102bc40a161366d5a210405724221cd6616fc9f99999"
     },
     {
@@ -174,13 +179,18 @@
       "original_sha256": null
     },
     {
+      "path": "core/academic_year.py",
+      "sha256": "1d0b1e14395ef3b85188ae0ff3462bb29205f12401a3c42d809994ef54f5a5cb",
+      "original_sha256": null
+    },
+    {
       "path": "core/cohort_manager.py",
-      "sha256": "bb1ac8f1bc487ea937d90aceb404aee6b44e993e7fa1930104bae908067e1cbd",
+      "sha256": "3fce8b8727bd50f0cb3e77d699ec3ab37773e359d45936bc070ca11a01f265d1",
       "original_sha256": "0927bfdece2a48b52bb73763b0499c359350169324aa1df776d679f4d9eb1af3"
     },
     {
       "path": "core/daily_runner.py",
-      "sha256": "67c93a102c0578363c2ea51204c04fae9183ba0822be89e8ec4e8bb665097758",
+      "sha256": "015243580f8807875d25af47cfab1d5057b3d7e3b0c9db6226af7628c0f6492e",
       "original_sha256": "17fa342efe3460f9cb4097d85200b45b687b6c4ee587536a8e69e73ccc4c0a46"
     },
     {
@@ -195,12 +205,22 @@
     },
     {
       "path": "core/doctor.py",
-      "sha256": "c0bbc27c0f80e6c03f7d79cf28428f275adbb1c4723b155542795050d115cc33",
+      "sha256": "fd192098a4141d2a540bd681894724eff37a75a00ad5af3b400690fe6146cb18",
+      "original_sha256": null
+    },
+    {
+      "path": "core/friday_visualization.py",
+      "sha256": "c2440b8e3f81df0ac95968f2c1218632f45b2afaab9a670a8470326cdd5ef496",
+      "original_sha256": null
+    },
+    {
+      "path": "core/history_window.py",
+      "sha256": "5529b7a82b92d58c641f4b12b31b5bbc3cfc428efee30adf1d0f12b758af43ae",
       "original_sha256": null
     },
     {
       "path": "core/pipeline.py",
-      "sha256": "1d6c8e238652a67ad8bc21e3e7e6041a5c36bbf488ef3328fc201989026842fd",
+      "sha256": "c9b6335101f00704c1a5019bc685b2dcf96d3d784d524257be9420d3d73d8be5",
       "original_sha256": null
     },
     {
@@ -209,8 +229,18 @@
       "original_sha256": null
     },
     {
+      "path": "core/report_checks.py",
+      "sha256": "de34e734b34897b6851198d9a2283df6a768a931a4d67a2419ae2099fc30a944",
+      "original_sha256": null
+    },
+    {
       "path": "core/report_targets.py",
       "sha256": "6a09df244c7b62bfd867cc7a95897347dd6c88c0761140ef7adc652e76ce3e78",
+      "original_sha256": null
+    },
+    {
+      "path": "core/rollover.py",
+      "sha256": "52606ac7f8d7c96d805b68ec6168f2abb6e7d28ba48f6632eeacb4a3cd8ed93f",
       "original_sha256": null
     },
     {
@@ -294,13 +324,23 @@
       "original_sha256": null
     },
     {
+      "path": "tests/october_fixture.py",
+      "sha256": "5f049c710ed0aea0742ea031b5e9952030657fad6897a04ea2d22f7c3d67dede",
+      "original_sha256": null
+    },
+    {
+      "path": "tests/test_academic_year.py",
+      "sha256": "dc07cfe9b6e8cacdd72137c826a437f07f5112e65511738adfdbc7365711b9fb",
+      "original_sha256": null
+    },
+    {
       "path": "tests/test_automation.py",
-      "sha256": "5b2a06ee571a07606c86e07835d0a658c5f556ffaae0aaa296f26358d5f2542c",
+      "sha256": "81a2b0db9e73918967985d6940e8185a2a9008fcb983b1f90c7a307426d95644",
       "original_sha256": null
     },
     {
       "path": "tests/test_operations.py",
-      "sha256": "0397c1b23e170b7d99883988656d06f628dda6383d127e945f20d87d51da3fa9",
+      "sha256": "341095d88103f6d0ea0f6e7d437377b4cc7e1b25311c166c7f22a0abae162d18",
       "original_sha256": null
     },
     {
